@@ -1,21 +1,14 @@
-import sys
-import pycurl
+'''import MySQLdb
 
-filename = 'stockdata'
-url = 'http://market.finance.sina.com.cn/downxls.php?date=2013-12-09&symbol=sz002363'
-#url = 'http://www.163.com'
-fp = open(filename, "wb")
-curl = pycurl.Curl()
-curl.setopt(pycurl.URL, url)
-curl.setopt(pycurl.FOLLOWLOCATION, 1)
-curl.setopt(pycurl.MAXREDIRS, 5)
-curl.setopt(pycurl.CONNECTTIMEOUT, 30)
-curl.setopt(pycurl.TIMEOUT, 300)
-curl.setopt(pycurl.NOSIGNAL, 1)
-curl.setopt(pycurl.WRITEDATA, fp)
-curl.perform()
+db = MySQLdb.connect(host='localhost',
+                     user='root',
+                     passwd='admin',
+                     db='MyStock')
 
-curl.close()
-fp.close()
-sys.stdout.write(".")
-sys.stdout.flush()
+cur = db.cursor()
+
+cur.execute('select * from stock_crawl_management')
+
+for row in cur.fetchall():
+    print row'''    
+
