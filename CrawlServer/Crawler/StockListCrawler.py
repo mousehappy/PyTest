@@ -17,7 +17,9 @@ class StockListCrawler:
     def __init__(self, url='http://quote.eastmoney.com/stocklist.html'):
         self.update_date = date.today()
         self.parser = StockListParser.StockListParser()
-        self.stocklist = []
+        self.stock_list = []
+        self.stock_name_list = []
+        self.stock_dict = {}
         self.url = url
     
     def crawl(self):
@@ -41,7 +43,9 @@ class StockListCrawler:
             else:
                 context=buf.getvalue()
                 self.parser.feed(context)
-                self.stocklist = self.parser.get_stock_list()
+                self.stock_list = self.parser.get_stock_list()
+                self.stock_name_list = self.parser.get_stock_names()
+                self.stock_dict = self.parser.get_stock_dict()
                 sys.stdout.write("Stock list crwal finish")
                 sys.stdout.flush()
                 break
@@ -53,7 +57,10 @@ class StockListCrawler:
         buf.close()
                     
     def get_stock_list(self):
-        return self.stocklist
+        return self.stock_list
+    
+    def get_stock_dict(self):
+        return self.stock_dict
     
     def refresh_DB(self):
         if len(self.stocklist) == 0:

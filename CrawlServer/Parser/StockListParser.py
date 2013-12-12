@@ -4,7 +4,7 @@ import re
 class StockListParser(HTMLParser):
     def __init__(self):
         self.start_a = False
-        self.StockList = []
+        self.stock_dict = {}
         self.encoder = ""
         HTMLParser.__init__(self)
         
@@ -29,8 +29,19 @@ class StockListParser(HTMLParser):
             return
         if self.start_a :
             data = data.decode(self.encoder).encode('utf8')
-            if re.match('.*\(\d{6}\)', data):
-                self.StockList.extend(re.findall('\d{6}', data))
+            m = re.match('(.*)\((\d{6})\)', data)
+            if m:
+                self.stock_dict[m.group(2)] = m.group(1)
+                #self.name_List.append(m.group(1))
+                #self.id_List.append(m.group(2))
     
     def get_stock_list(self):
-        return self.StockList
+        return self.stock_dict.keys()
+    
+    def get_stock_names(self):
+        return self.stock_dict.values()
+    
+    def get_stock_dict(self):
+        return self.stock_dict
+    
+    

@@ -1,4 +1,27 @@
-   111
-  222
-   333
-   444
+C:\Python27
+C:\Python27\DLLs
+C:\Python27\lib
+C:\Python27\lib\lib-tk
+C:\Python27\lib\plat-win
+C:\Python27\lib\site-packages
+C:\Python27\lib\site-packages\coverage-3.6-py2.7-win32.egg
+C:\Python27\lib\site-packages\setuptools-1.0-py2.7.egg
+C:\Python27\lib\site-packages\sqlalchemy-0.9.0b1-py2.7-win32.egg
+C:\Users\shwang\Documents\Aptana Studio 3 Workspace\PyTest
+C:\Users\shwang\Documents\Aptana Studio 3 Workspace\PyTest\src
+C:\Windows\system32\python27.zip
+
+
+C:\Python27
+C:\Python27\DLLs
+C:\Python27\lib
+C:\Python27\lib\lib-tk
+C:\Python27\lib\plat-win
+C:\Python27\lib\site-packages
+C:\Python27\lib\site-packages\coverage-3.6-py2.7-win32.egg
+C:\Python27\lib\site-packages\setuptools-1.0-py2.7.egg
+C:\Python27\lib\site-packages\sqlalchemy-0.9.0b1-py2.7-win32.egg
+C:\Users\shwang\Documents\Aptana Studio 3 Workspace\PyTest
+C:\Users\shwang\Documents\Aptana Studio 3 Workspace\PyTest\src
+C:\Windows\system32\python27.zip
+
