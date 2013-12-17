@@ -44,9 +44,9 @@ class DB_Base:
         
     
 
-__DB = DB_Base()
+G_DB = DB_Base()
 
-__Base = __DB.get_base()
+__Base = G_DB.get_base()
 
 class StockManagement(__Base):
     __tablename__= 'stock_management'

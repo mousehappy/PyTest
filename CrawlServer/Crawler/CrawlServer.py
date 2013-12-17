@@ -38,19 +38,30 @@ class CrawlServer(object):
             session = self.__DB.get_session()
             stocks = session.query(StockManagement.id).filter(StockManagement.status==0).limit(100).all()
             session.close()
-            
+            stock_count = len(stocks)
             end_date = date.today()
             end_date = self.check_date(end_date)
             start_date = end_date - timedelta(days)
-            task_dict = {}
-            for stock in stocks:
-                stockid = stock[0].encode('utf-8')
-                task_dict.setdefault(stockid, []).append(start_date)
-                task_dict[stockid].append(end_date)
+            while stock_count != 0:
+                task_dict = {}
+                for stock in stocks:
+                    stockid = stock[0].encode('utf-8')
+                    task_dict.setdefault(stockid, []).append(start_date)
+                    task_dict[stockid].append(end_date)
+                
+                self.__CrawlManager.generate_tasks(tasks = task_dict)
+                self.__CrawlManager.start_crawl()
+                self.__Crawl_Finish = False
+                self.waiting_for_crawl()
+                
+                session = self.__DB.get_session()
+                stocks = session.query(StockManagement.id).filter(StockManagement.status==0).limit(100).all()
+                session.close()
+                stock_count = len(stocks)
             
-            self.__CrawlManager.generate_tasks(tasks = task_dict)
-            self.__CrawlManager.start_crawl()
-            self.__Crawl_Finish = False
+            
+            
+            
     
     def waiting_for_crawl(self):
         while True:
