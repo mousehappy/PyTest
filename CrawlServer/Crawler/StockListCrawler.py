@@ -9,10 +9,6 @@ import cStringIO
 filename = 'stocklist.html'
 #url = 'http://www.163.com'
 
-
-
-
-
 class StockListCrawler:
     def __init__(self, url='http://quote.eastmoney.com/stocklist.html'):
         self.update_date = date.today()

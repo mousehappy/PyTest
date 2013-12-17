@@ -1,3 +1,4 @@
+#coding=utf-8
 from HTMLParser import HTMLParser
 import re
 
@@ -6,6 +7,7 @@ class StockListParser(HTMLParser):
         self.start_a = False
         self.stock_dict = {}
         self.encoder = ""
+        self.__prefix = ""
         HTMLParser.__init__(self)
         
     def handle_starttag(self, tag, attrs):
@@ -25,13 +27,18 @@ class StockListParser(HTMLParser):
             self.start_a = False
             
     def handle_data(self, data):
+        data = data.decode('gb2312')
+        if data == "上海股票".decode('utf-8'):#"\xe4\xb8\x8a\xe6\xb5\xb7\xe8\x82\xa1\xe7\xa5\xa8":
+            self.__prefix = "sh"
+        elif data == "深圳股票".decode('utf-8'):
+            self.__prefix = "sz"
         if self.encoder == "":
             return
         if self.start_a :
-            data = data.decode(self.encoder).encode('utf8')
+            #.encode('utf8')
             m = re.match('(.*)\((\d{6})\)', data)
             if m:
-                self.stock_dict[m.group(2)] = m.group(1)
+                self.stock_dict[self.__prefix+m.group(2)] = m.group(1)
                 #self.name_List.append(m.group(1))
                 #self.id_List.append(m.group(2))
     

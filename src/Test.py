@@ -1,6 +1,5 @@
 from DBModule.Modules import StockManagement
 from DBModule.Modules import DB_Base
-from DBModule.Modules import StockManagement
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
