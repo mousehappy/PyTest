@@ -5,17 +5,18 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.sql.expression import func
 from sqlalchemy.schema import Index
+from Crawler.CrawlConfig import G_Config
 
 class DB_Base:
     __base = declarative_base()
     __engine = None
     __session_pool = None
-    def __init__(self, engine=None):
+    def __init__(self, engine=None, config=None):
         if DB_Base.__engine != None:
             print "Database engine already exists"
             return
         if engine != None:
-            DB_Base.__engine = create_engine(engine)
+            DB_Base.__engine = create_engine(engine,**config)
             
     def get_engine(self, engine = None):
         if DB_Base.__engine != None:
@@ -44,7 +45,9 @@ class DB_Base:
         
     
 
-G_DB = DB_Base()
+
+
+G_DB = DB_Base(G_Config.db_str, G_Config.db_args)
 
 __Base = G_DB.get_base()
 

@@ -1,7 +1,5 @@
 from Modules import *
-from CrawlServer.Crawler.CrawlConfig import G_Config
 
-G_DB = DB_Base(G_Config.db_str)
 
 class StockManager():
     __DB = None
@@ -13,4 +11,9 @@ class StockManager():
     def SelectInitialStock(self,limit=100):
         session = self.__DB.get_session()
         stocks = session.query(StockManagement.id).filter(StockManagement.status==0).limit(100).all()
+        session.close()
         return stocks
+    
+    def SetInitialCrawl(self,*stocks):
+        for stock in stocks:
+            pass
