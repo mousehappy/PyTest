@@ -1,7 +1,8 @@
-from datetime import *
+from DBModule.Modules import *
 
+session = G_DB.get_session()
 
-d = {1:11,2:22,3:33}
+SMs = session.query(StockManagement).limit(100).all()
 
-for iter in iter(d):
-    print iter
+for SM in SMs:
+    print SM

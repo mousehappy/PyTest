@@ -13,14 +13,17 @@ class StockDataCrawler(threading.Thread):
     __stop = False
     __task_lock = None
     __task_count = None
+    __error_dict = None
     
-    def __init__(self, task_queue):
+    def __init__(self, task_queue, error_dict):
         threading.Thread.__init__(self)
         self.queue = task_queue
         if StockDataCrawler.__task_lock == None:
             StockDataCrawler.__task_lock = threading.Lock()
         if StockDataCrawler.__task_count == None:
             StockDataCrawler.__task_count = task_queue.qsize()
+        if StockDataCrawler.__error_dict == None:
+            StockDataCrawler.__error_dict = error_dict
         
     def stop(self):
         self.__stop = True
@@ -28,15 +31,19 @@ class StockDataCrawler(threading.Thread):
     def get_next_task(self):
         task = None
         StockDataCrawler.__task_lock.acquire()
-        if StockDataCrawler.__task_count == 0:
-            print "All task has finished! Thread %s is stopping!"%self.name
-        try:
-            task = self.queue.get(True, 1)
-        except Queue.Empty:
-            print "Thread %s is finished!"%self.name  
-        else:
-            StockDataCrawler.__task_count -= 1
+        while True:
+            try:
+                task = self.queue.get(True, 1)
+            except Queue.Empty:
+                print "Thread %s is finished!"%self.name
+                break
+            else:
+                if task[0] in StockDataCrawler.__error_dict.keys():
+                    continue
+                else:
+                    break 
         StockDataCrawler.__task_lock.release()
+        time.sleep(1)
         return task
     
     
@@ -51,10 +58,10 @@ class StockDataCrawler(threading.Thread):
             
             stockid = task[0]
             crawldate = task[1]
-            file_name = self.__data_dir+"\\"+stockid+"\\"+crawldate+".txt"
-            file = open(file_name,'w+')
+            crawldate_str = crawldate.isoformat()
+            
             curl = pycurl.Curl()
-            url =self.__url + "date="+crawldate+"&"+"symbol="+stockid
+            url =self.__url + "date="+crawldate_str+"&"+"symbol="+stockid
             curl.setopt(pycurl.URL, url)
             curl.setopt(pycurl.FOLLOWLOCATION, 1)
             curl.setopt(pycurl.MAXREDIRS, 5)
@@ -70,18 +77,31 @@ class StockDataCrawler(threading.Thread):
                     import traceback
                     traceback.print_exc(file=sys.stderr)
                     sys.stderr.flush()
+                    self.record_error(self, stockid, crawldate)
                 else:
                     content = buf.getvalue().decode('gb2312')
-                    file.write(content)
+                    if len(content) == 0:
+                        self.record_error(stockid, crawldate)
+                    elif len(content) > 1000:
+                        file_name = self.__data_dir+"\\"+stockid+"\\"+crawldate_str+".txt"
+                        file = open(file_name,'w+')
+                        file.close()
+                        file.write(content)
                     break
             else:
                 self.queue.put((stockid, crawldate))
             buf.close()
             curl.close()
-            file.close()
             print "Crawl stock %s of %s finished!"%(stockid, crawldate)
-        
-            
+    
+    
+    def record_error(self, stockid, crawldate):
+        StockDataCrawler.__task_lock.acquire()
+        if stockid in StockDataCrawler.__error_dict.keys():
+            StockDataCrawler.__error_dict[stockid] = (StockDataCrawler.__error_dict[stockid] < crawldate and StockDataCrawler.__error_dict[stockid]) or crawldate
+        else:
+            StockDataCrawler.__error_dict[stockid] = crawldate
+        StockDataCrawler.__task_lock.release()
     
         
         

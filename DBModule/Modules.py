@@ -54,7 +54,7 @@ __Base = G_DB.get_base()
 class StockManagement(__Base):
     __tablename__= 'stock_management'
     id = Column(String(8), primary_key=True)
-    name = Column(String(30))
+    name = Column(String(30), nullable = True)
     status = Column(Integer, default = 0)
     data_begin_date = Column(Date, nullable = True)
     data_end_date = Column(Date, nullable = True)
@@ -62,9 +62,11 @@ class StockManagement(__Base):
     insert_timestamp = Column(DateTime, default = func.current_timestamp())
     update_timestamp = Column(DateTime, nullable = True)
     
-    def __init__(self, id, name):
-        self.id = id
-        self.name = name
+    def __init__(self, id = None, name = None):
+        if id:
+            self.id = id
+        if name:
+            self.name = name
         
     def __repr__(self):
         return "<Stock(id='%s', name='%s',status='%s','last_crawl_date'='%s')>" % (self.id, self.name, self.status, self.data_end_date)

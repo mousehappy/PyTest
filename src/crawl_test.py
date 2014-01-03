@@ -1,4 +1,4 @@
-from CrawlServer.Crawler.StockListCrawler import StockListCrawler
+from Crawler.StockListCrawler import StockListCrawler
 from mimify import File
 from test.test_decimal import file
 from DBModule.Modules import *
@@ -28,17 +28,25 @@ a = crawler.get_stock_dict().items()[0][1]
 
 #_file.write(a)
 
-for key,value in crawler.get_stock_dict().items():
+stock_dict = crawler.get_stock_dict();
+
+db_stocks = session.query(StockManagement).filter(StockManagement.id in stock_dict.keys()).all();
+
+for key in stock_dict:
     #value = value.decode('utf-8').encode('gb2312')
     #retStr = value.decode('hex')
     '''key += ":"
     key += value
     key += "\n"
     _file.write(key)'''
-    stocks.append({'id':key,'name':value})
-
-session.execute(StockManagement.__table__.insert(), stocks)
-
+    SM = StockManagement()
+    SM.id = key
+    SM.name = stock_dict[key]
+    SM1 = session.merge(SM)
+    if SM1.data_end_date:
+        print SM1
+    #print SM1
+    
 session.commit()
 
 _file.close()

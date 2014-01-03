@@ -5,6 +5,7 @@ from sqlalchemy.sql.operators import like_op
 from CrawlManager import CrawlManager
 from datetime import *
 import time
+from MySQLdb.constants.FIELD_TYPE import NULL
 
 class CrawlServer(object):
     __DB = None
@@ -28,40 +29,74 @@ class CrawlServer(object):
             date = date - timedelta(1)
         return date
     
+    
     def inital_crawl(self, days = 360, *stockids):
         #print "argu length: %d"%len(stockids)
-        if len(stockids) > 0:
-            for sid in stockids:
-                print sid
-                pass
-        else:
-            session = self.__DB.get_session()
-            stocks = session.query(StockManagement.id).filter(StockManagement.status==0).limit(100).all()
-            session.close()
+        end_date = date.today()
+        end_date = self.check_date(end_date)
+        start_date = end_date - timedelta(days)
+        stocks = self.get_initial_token()
+        stock_count = len(stocks)
+        while stock_count != 0:
+            task_dict = {}
+            for stock in stocks:
+                task_dict.setdefault(stock, []).append(start_date)
+                task_dict[stock].append(end_date)
+            
+            self.__CrawlManager.generate_tasks(tasks = task_dict)
+            self.__CrawlManager.start_crawl()
+            self.__Crawl_Finish = False
+            self.waiting_for_crawl()
+            error_records = self.__CrawlManager.get_errors()
+            self.complete_crawl(task_dict, error_records)
+            stocks = self.get_initial_token()
             stock_count = len(stocks)
-            end_date = date.today()
-            end_date = self.check_date(end_date)
-            start_date = end_date - timedelta(days)
-            while stock_count != 0:
-                task_dict = {}
-                for stock in stocks:
-                    stockid = stock[0].encode('utf-8')
-                    task_dict.setdefault(stockid, []).append(start_date)
-                    task_dict[stockid].append(end_date)
-                
-                self.__CrawlManager.generate_tasks(tasks = task_dict)
-                self.__CrawlManager.start_crawl()
-                self.__Crawl_Finish = False
-                self.waiting_for_crawl()
-                
-                session = self.__DB.get_session()
-                stocks = session.query(StockManagement.id).filter(StockManagement.status==0).limit(100).all()
-                session.close()
-                stock_count = len(stocks)
+    
+    def error_recrawl(self, days = 360, *stockids):
+        #print "argu length: %d"%len(stockids)
+        end_date = date.today()
+        end_date = self.check_date(end_date)
+        start_date = end_date - timedelta(days)
+        stocks = self.get_error_token()
+        stock_count = len(stocks)
+        while stock_count != 0:
+            task_dict = {}
+            for stock in stocks:
+                task_dict.setdefault(stock, []).append(start_date)
+                task_dict[stock].append(end_date)
             
+            self.__CrawlManager.generate_tasks(tasks = task_dict)
+            self.__CrawlManager.start_crawl()
+            self.__Crawl_Finish = False
+            self.waiting_for_crawl()
+            error_records = self.__CrawlManager.get_errors()
+            self.complete_crawl(task_dict, error_records)
+            stocks = self.get_initial_token()
+            stock_count = len(stocks)
             
+    def get_initial_token(self):
+        session = self.__DB.get_session()
+        stocks = session.query(StockManagement).filter(or_(StockManagement.status==0, StockManagement.status == None)).limit(20).all()
+        session.close()
+        stockids = []
+        for stock in stocks:
+            stockids.append(stock.id)
+        return stockids
             
-            
+    def get_all_error_token(self):
+        session = self.__DB.get_session()
+        stocks = session.query(StockManagement).filter(StockManagement.status==3).all()
+        session.close()
+        stockids = []
+        for stock in stocks:
+            stockids.append(stock.id)
+        return stockids
+    
+    def get_error_token(self):
+        session = self.__DB.get_session()
+        stocks = session.query(StockManagement).filter(StockManagement.status==3).limit(20).all()
+        session.close()
+        return stocks
     
     def waiting_for_crawl(self):
         while True:
@@ -81,6 +116,25 @@ class CrawlServer(object):
                 print task
             except:
                 break
+    
+    def complete_crawl(self, task_dict, error_records):
+        session = self.__DB.get_session()
+        crawled_stocks = session.query(StockManagement).filter(StockManagement.id in task_dict.keys()).all()
+        for stockid in task_dict:
+            SM = StockManagement()
+            SM.id = stockid
+            SM.data_begin_date = task_dict[stockid][0]
+            SM.data_end_date = task_dict[stockid][1]
+            SM.status = 2
+            SM = session.merge(SM)
         
+        for stockid in error_records:
+            SM = StockManagement()
+            SM.id = stockid
+            SM.status = 3
+            SM.data_end_date = error_records[stockid]- timedelta(1)
+            SM = session.merge(SM)
 
+        session.commit()
+        session.close()
             

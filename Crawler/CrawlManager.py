@@ -15,8 +15,8 @@ class CrawlManager:
     __thread_count = 5
     __thread_pool = []
     __data_dir = r"C:\StockData"
-    __task_dict = {}
-    __task_error = {}
+    __error_dict = {}
+    
     def __init__(self):
         pass
     
@@ -32,12 +32,9 @@ class CrawlManager:
             if not os.path.isdir(stockid):
                 os.mkdir(stockid)
             n = self.__end_date - self.__start_date
-            for i in xrange(n.days):
+            for i in xrange(0,n.days):
                 crawldate = self.__start_date+timedelta(i)
-                print crawldate.isoformat()
                 self.__task_queue.put((stockid,crawldate.isoformat()))
-                self.__task_dict.setdefault(stockid,0)
-                self.__task_dict[stockid] += 1
         
         if tasks != None:
             if not isinstance(tasks, dict):
@@ -51,14 +48,14 @@ class CrawlManager:
                 start_date = item[1][0]
                 end_date = item[1][1]
                 interval = end_date - start_date
-                for i in range(1,interval.days+1):
+                for i in range(interval.days+1):
                     crawl_date = start_date + timedelta(i)
-                    self.__task_queue.put((stockid, crawl_date.isoformat()))
+                    self.__task_queue.put((stockid, crawl_date))
     
  
     def start_crawl(self):
         for i in range(self.__thread_count):
-            self.__thread_pool.append(StockDataCrawler(self.__task_queue))
+            self.__thread_pool.append(StockDataCrawler(self.__task_queue, self.__error_dict))
         
         for t in self.__thread_pool:
             t.start()
@@ -77,4 +74,7 @@ class CrawlManager:
     
     def get_task_queue(self):
         return self.__task_queue
+    
+    def get_errors(self):
+        return self.__error_dict
                 
