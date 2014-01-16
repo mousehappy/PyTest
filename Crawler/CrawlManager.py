@@ -7,6 +7,7 @@ from StockCrawler import StockCrawler
 import threading
 from StockDataCrawler import StockDataCrawler
 import os
+from Crawler.CrawlConfig import G_Config
 
 class CrawlManager:
     __start_date = date(2000,01,01)
@@ -14,7 +15,7 @@ class CrawlManager:
     __task_queue = Queue.Queue()
     __thread_count = 5
     __thread_pool = []
-    __data_dir = r"C:\StockData"
+    __data_dir = G_Config.data_dir
     __error_dict = {}
     
     def __init__(self):
@@ -77,4 +78,9 @@ class CrawlManager:
     
     def get_errors(self):
         return self.__error_dict
+    
+    def clear(self):
+        self.__thread_pool = []
+        self.__task_queue.empty()
+        self.__error_dict = {}
                 

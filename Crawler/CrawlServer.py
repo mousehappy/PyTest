@@ -51,6 +51,44 @@ class CrawlServer(object):
             self.complete_crawl(task_dict, error_records)
             stocks = self.get_initial_token()
             stock_count = len(stocks)
+        
+        error_sms = self.get_error_token()
+        stock_count = len(error_sms)
+        while stock_count != 0:
+            task_dick = {}
+            for stock in error_sms:
+                stockid = stock.id
+                task_dict.setdefault(stockid, []).append(stock.data_begin_date)
+                task_dict[stockid].append(end_date)
+            self.__CrawlManager.generate_tasks(tasks = task_dict)
+            self.__CrawlManager.start_crawl()
+            self.__Crawl_Finish = False
+            self.waiting_for_crawl()
+            error_records = self.__CrawlManager.get_errors()
+            self.complete_crawl(task_dict, error_records)
+            error_sms = self.get_error_token()
+            stock_count = len(error_sms)
+        
+        print "Initial crawl finished!!"
+                #task_dict.setdefault(stock.id, []).append()
+                
+    def test_error_crawl(self):
+        end_date = date.today()
+        end_date = self.check_date(end_date)
+        error_sms = self.get_error_token()
+        stock_count = len(error_sms)
+        while stock_count != 0:
+            task_dick = {}
+            for stock in error_sms:
+                stockid = stock.id
+                stock_begin_date = stock.data_begin_date
+                stock_end_date = stock.data_end_date
+                year = stock_begin_date[:4]
+                month = stock_begin_date[5:6]
+                day = stock_begin_date[7:8]
+                error_begin_date = date(year, month, day)
+                task_dick.setdefault(stockid, []).append(error_begin_date)
+                task_dick[stockid].append(end_date)
     
     def error_recrawl(self, days = 360, *stockids):
         #print "argu length: %d"%len(stockids)
@@ -137,4 +175,5 @@ class CrawlServer(object):
 
         session.commit()
         session.close()
+        self.__CrawlManager.clear()
             

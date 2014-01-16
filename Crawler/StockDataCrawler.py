@@ -5,10 +5,11 @@ import sys
 import pycurl
 import cStringIO
 import os
+from Crawler.CrawlConfig import G_Config
 
 class StockDataCrawler(threading.Thread):
     'http://market.finance.sina.com.cn/downxls.php?date=2013-12-05&symbol=sz300027'
-    __data_dir = r"C:\StockData"
+    __data_dir = G_Config.data_dir
     __url = r"http://market.finance.sina.com.cn/downxls.php?"
     __stop = False
     __task_lock = None
@@ -43,7 +44,7 @@ class StockDataCrawler(threading.Thread):
                 else:
                     break 
         StockDataCrawler.__task_lock.release()
-        time.sleep(1)
+        #time.sleep(0.5)
         return task
     
     
@@ -77,16 +78,19 @@ class StockDataCrawler(threading.Thread):
                     import traceback
                     traceback.print_exc(file=sys.stderr)
                     sys.stderr.flush()
-                    self.record_error(self, stockid, crawldate)
+                    if try_i == 3:
+                        self.record_error(self, stockid, crawldate)
+                    else:
+                        time.sleep(2)
                 else:
                     content = buf.getvalue().decode('gb2312')
                     if len(content) == 0:
                         self.record_error(stockid, crawldate)
                     elif len(content) > 1000:
-                        file_name = self.__data_dir+"\\"+stockid+"\\"+crawldate_str+".txt"
+                        file_name = self.__data_dir+"/"+stockid+"/"+crawldate_str+".txt"
                         file = open(file_name,'w+')
-                        file.close()
                         file.write(content)
+                        file.close()
                     break
             else:
                 self.queue.put((stockid, crawldate))
