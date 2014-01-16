@@ -1,8 +1,9 @@
 from DBModule.Modules import *
 
-session = G_DB.get_session()
+stockid = 'sz000893'
 
-SMs = session.query(StockManagement).limit(100).all()
+m_name = 'stocktbl'+stockid[-1]+'()'
 
-for SM in SMs:
-    print SM
+a = eval(m_name)
+
+print a

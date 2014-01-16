@@ -5,7 +5,7 @@ class CrawlConfig:
     data_dir = ""
     def __init__(self):
         self.db_str = "mysql://root:admin@localhost:3306/MyStock?charset=utf8&use_unicode=0"
-        self.data_dir = "~/StockData"
+        self.data_dir = "C:\\StockData"
         #self.db_args["convert_unicode"] = True
         #self.db_args["encoding"] = 'utf-8'
 

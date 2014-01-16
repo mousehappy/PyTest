@@ -1,27 +1,60 @@
-C:\Python27
-C:\Python27\DLLs
-C:\Python27\lib
-C:\Python27\lib\lib-tk
-C:\Python27\lib\plat-win
-C:\Python27\lib\site-packages
-C:\Python27\lib\site-packages\coverage-3.6-py2.7-win32.egg
-C:\Python27\lib\site-packages\setuptools-1.0-py2.7.egg
-C:\Python27\lib\site-packages\sqlalchemy-0.9.0b1-py2.7-win32.egg
-C:\Users\shwang\Documents\Aptana Studio 3 Workspace\PyTest
-C:\Users\shwang\Documents\Aptana Studio 3 Workspace\PyTest\src
-C:\Windows\system32\python27.zip
-
-
-C:\Python27
-C:\Python27\DLLs
-C:\Python27\lib
-C:\Python27\lib\lib-tk
-C:\Python27\lib\plat-win
-C:\Python27\lib\site-packages
-C:\Python27\lib\site-packages\coverage-3.6-py2.7-win32.egg
-C:\Python27\lib\site-packages\setuptools-1.0-py2.7.egg
-C:\Python27\lib\site-packages\sqlalchemy-0.9.0b1-py2.7-win32.egg
-C:\Users\shwang\Documents\Aptana Studio 3 Workspace\PyTest
-C:\Users\shwang\Documents\Aptana Studio 3 Workspace\PyTest\src
-C:\Windows\system32\python27.zip
-
+#coding=utf-8
+result	dict: {u'company_code': None, u'endDate': u'2014-01-07', u'employeeShares': u'             .00', u'seq': None, u'CHANGEABLE_BOND_ABBR': u'-', u'totalNonFlowSharePercent': u'20.00', u'OFFICE_ZIP': u'200002', u'AREA_NAME_DESC': u'\\u4e0a\\u6d77', u'FULL_NAME_IN_ENGLISH': u'Shanghai Pudong Development Bank Co., Ltd', u'socialLShares': u'             .00', u'ASharesPercent': u'80.00', u'organizationShares': u'       373069.43', u'totalNonFlowShare': u'       373069.43', u'othersSharesPercent': u'0.00', u'totalFlowShares': u'      1492277.71', u'totalSharesPercent': u'100', u'COMPANY_CODE': u'600000', u'CSRC_MIDDLE_CODE_DESC': u'-', u'HSharesPercent': u'0.00', u'real_date': None, u'HShares': u'             .00', u'SECURITY_ABBR_A': u'\\u6d66\\u53d1\\u94f6\\u884c', u'othersShares': u'             .00', u'employeeSharesPercent': u'0.00', u'COMPANY_ADDRESS': u'\\u4e0a\\u6d77\\u5e02\\u6d66\\u4e1c\\u65b0\\u533a\\u6d66\\u4e1c\\u5357\\u8def500\\u53f7', u'SECURITY_CODE_A': u'600000', u'SECURITY_CODE_B': u'-', u'lega...	
+	AREA_NAME_DESC (60562704)	unicode: 上海	
+	AShares (62087344)	unicode:       1492277.71	
+	ASharesPercent (62087392)	unicode: 80.00	
+	BShares (62087440)	unicode:              .00	
+	BSharesPercent (62087488)	unicode: 0.00	
+	CHANGEABLE_BOND_ABBR (60563088)	unicode: -	
+	CHANGEABLE_BOND_CODE (60562968)	unicode: -	
+	COMPANY_ABBR (60562680)	unicode: 浦发银行	
+	COMPANY_ADDRESS (60563112)	unicode: 上海市浦东新区浦东南路500号	
+	COMPANY_CODE (60562416)	unicode: 600000	
+	CSRC_CODE_DESC (60562032)	unicode: 金融业	
+	CSRC_GREAT_CODE_DESC (60562872)	unicode: 货币金融服务	
+	CSRC_MIDDLE_CODE_DESC (60561720)	unicode: -	
+	ENGLISH_ABBR (60561792)	unicode: spdb	
+	E_MAIL_ADDRESS (60562080)	unicode: bdo@spdb.com.cn	
+	FOREIGN_LISTING_ADDRESS (60563016)	unicode: -	
+	FOREIGN_LISTING_DESC (60563376)	unicode: 否	
+	FULLNAME (60562896)	unicode: 上海浦东发展银行股份有限公司	
+	FULL_NAME_IN_ENGLISH (60562776)	unicode: Shanghai Pudong Development Bank Co., Ltd	
+	HShares (62087536)	unicode:              .00	
+	HSharesPercent (62087584)	unicode: 0.00	
+	LEGAL_REPRESENTATIVE (60561912)	unicode: 吉晓辉	
+	OFFICE_ADDRESS (60562488)	unicode: 上海市中山东一路12号	
+	OFFICE_ZIP (60561960)	unicode: 200002	
+	REPR_PHONE (60561888)	unicode: -	
+	SECURITY_30_DESC (60563256)	unicode: 是	
+	SECURITY_ABBR_A (60562584)	unicode: 浦发银行	
+	SECURITY_CODE_A (60562272)	unicode: 600000	
+	SECURITY_CODE_A_SZ (60563160)	unicode: -	
+	SECURITY_CODE_B (60562392)	unicode: -	
+	SSE_CODE_DESC (60562176)	unicode: 综合	
+	STATE_CODE_A_DESC (60562440)	unicode: 上市	
+	STATE_CODE_B_DESC (60563136)	unicode: -	
+	WWW_ADDRESS (60562200)	unicode: http://www.spdb.com.cn	
+	__len__	int: 57	
+	change_reason (62087632)	NoneType: None	
+	company_code (62087656)	NoneType: None	
+	employeeShares (62087680)	unicode:              .00	
+	employeeSharesPercent (62087728)	unicode: 0.00	
+	endDate (62087776)	unicode: 2014-01-07	
+	legalShares (62087848)	unicode:              .00	
+	legalSharesPercent (62087920)	unicode: 0.00	
+	organizationShares (62087968)	unicode:        373069.43	
+	organizationSharesPercent (62088016)	unicode: 20.00	
+	other (62088064)	NoneType: None	
+	otherPercent (62088088)	NoneType: None	
+	othersShares (62088112)	unicode:              .00	
+	othersSharesPercent (62088160)	unicode: 0.00	
+	real_date (62088208)	NoneType: None	
+	seq (62088280)	NoneType: None	
+	socialLShares (62088256)	unicode:              .00	
+	socialLSharesPercent (62088328)	unicode: 0.00	
+	totalFlowShares (62088376)	unicode:       1492277.71	
+	totalFlowSharesPercent (62088424)	unicode: 80.00	
+	totalNonFlowShare (62088472)	unicode:        373069.43	
+	totalNonFlowSharePercent (62088520)	unicode: 20.00	
+	totalShares (62088568)	unicode:       1865347.14	
+	totalSharesPercent (62088640)	unicode: 100	

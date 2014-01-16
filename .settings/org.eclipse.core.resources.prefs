@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
+encoding//Crawler/CrawlServer.py=utf-8
+encoding//Crawler/ProcessManager.py=utf-8
 encoding//Parser/StockListParser.py=utf-8
-encoding//src/test2.py=utf-8
+encoding//src/Stock_detail_test.py=utf-8
+encoding/test2.py=utf-8

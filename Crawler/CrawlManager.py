@@ -7,6 +7,7 @@ from StockCrawler import StockCrawler
 import threading
 from StockDataCrawler import StockDataCrawler
 import os
+from CrawlConfig import G_Config
 
 class CrawlManager:
     __start_date = date(2000,01,01)
@@ -14,7 +15,7 @@ class CrawlManager:
     __task_queue = Queue.Queue()
     __thread_count = 5
     __thread_pool = []
-    __data_dir = r"C:\StockData"
+    __data_dir = G_Config.data_dir
     __error_dict = {}
     
     def __init__(self):
@@ -43,8 +44,8 @@ class CrawlManager:
             for item in tasks.iteritems():
                 stockid = item[0]
                 os.chdir(self.__data_dir)
-                if not os.path.isdir(stockid):
-                    os.mkdir(stockid)
+                if not os.path.isdir(stockid[2:]):
+                    os.mkdir(stockid[2:])
                 start_date = item[1][0]
                 end_date = item[1][1]
                 interval = end_date - start_date

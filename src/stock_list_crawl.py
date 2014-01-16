@@ -30,8 +30,6 @@ a = crawler.get_stock_dict().items()[0][1]
 
 stock_dict = crawler.get_stock_dict();
 
-db_stocks = session.query(StockManagement).filter(StockManagement.id in stock_dict.keys()).all();
-
 for key in stock_dict:
     #value = value.decode('utf-8').encode('gb2312')
     #retStr = value.decode('hex')
@@ -40,7 +38,8 @@ for key in stock_dict:
     key += "\n"
     _file.write(key)'''
     SM = StockManagement()
-    SM.id = key
+    SM.id = key[2:]
+    SM.market = key[0:2]
     SM.name = stock_dict[key]
     SM1 = session.merge(SM)
     if SM1.data_end_date:

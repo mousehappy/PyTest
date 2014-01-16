@@ -1,4 +1,4 @@
-from CrawlServer.Crawler.CrawlManager import CrawlManager
+from Crawler.CrawlManager import CrawlManager
 import time
 
 CM = CrawlManager()
