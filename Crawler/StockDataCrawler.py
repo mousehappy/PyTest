@@ -36,7 +36,7 @@ class StockDataCrawler(threading.Thread):
             try:
                 task = self.queue.get(True, 1)
             except Queue.Empty:
-                print "Thread %s is finished!"%self.name
+                print "Thread %s is finished!" % self.name
                 break
             else:
                 if task[0] in StockDataCrawler.__error_dict.keys():
@@ -46,7 +46,6 @@ class StockDataCrawler(threading.Thread):
         StockDataCrawler.__task_lock.release()
         #time.sleep(0.5)
         return task
-    
     
     def run(self):
         while True:
@@ -62,7 +61,7 @@ class StockDataCrawler(threading.Thread):
             crawldate_str = crawldate.isoformat()
             
             curl = pycurl.Curl()
-            url =self.__url + "date="+crawldate_str+"&"+"symbol="+stockid
+            url = self.__url + "date=" + crawldate_str + "&" + "symbol=" + stockid
             curl.setopt(pycurl.URL, url)
             curl.setopt(pycurl.FOLLOWLOCATION, 1)
             curl.setopt(pycurl.MAXREDIRS, 5)
@@ -70,7 +69,7 @@ class StockDataCrawler(threading.Thread):
             curl.setopt(pycurl.TIMEOUT, 300)
             curl.setopt(pycurl.NOSIGNAL, 1)
             curl.setopt(pycurl.WRITEFUNCTION, buf.write)
-            for try_i in range(1,4):
+            for try_i in range(1, 4):
                 try:
                     curl.perform()
                 except:
@@ -80,15 +79,23 @@ class StockDataCrawler(threading.Thread):
                     sys.stderr.flush()
                     if try_i == 3:
                         self.record_error(self, stockid, crawldate)
+<<<<<<< HEAD
                     else:
                         time.sleep(2)
+=======
+>>>>>>> ec6bf42550f8595a9e8f61c26dcc7b6eff52fa15
                 else:
                     content = buf.getvalue().decode('gb2312')
                     if len(content) == 0:
                         self.record_error(stockid, crawldate)
                     elif len(content) > 1000:
+<<<<<<< HEAD
                         file_name = self.__data_dir+"/"+stockid+"/"+crawldate_str+".txt"
                         file = open(file_name,'w+')
+=======
+                        file_name = self.__data_dir + "\\" + stockid[2:] + "\\" + crawldate_str + ".txt"
+                        file = open(file_name, 'w+')
+>>>>>>> ec6bf42550f8595a9e8f61c26dcc7b6eff52fa15
                         file.write(content)
                         file.close()
                     break
@@ -96,7 +103,7 @@ class StockDataCrawler(threading.Thread):
                 self.queue.put((stockid, crawldate))
             buf.close()
             curl.close()
-            print "Crawl stock %s of %s finished!"%(stockid, crawldate)
+            print "Crawl stock %s of %s finished!" % (stockid, crawldate)
     
     
     def record_error(self, stockid, crawldate):

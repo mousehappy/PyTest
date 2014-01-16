@@ -7,7 +7,11 @@ from StockCrawler import StockCrawler
 import threading
 from StockDataCrawler import StockDataCrawler
 import os
+<<<<<<< HEAD
 from Crawler.CrawlConfig import G_Config
+=======
+from CrawlConfig import G_Config
+>>>>>>> ec6bf42550f8595a9e8f61c26dcc7b6eff52fa15
 
 class CrawlManager:
     __start_date = date(2000,01,01)
@@ -44,8 +48,8 @@ class CrawlManager:
             for item in tasks.iteritems():
                 stockid = item[0]
                 os.chdir(self.__data_dir)
-                if not os.path.isdir(stockid):
-                    os.mkdir(stockid)
+                if not os.path.isdir(stockid[2:]):
+                    os.mkdir(stockid[2:])
                 start_date = item[1][0]
                 end_date = item[1][1]
                 interval = end_date - start_date

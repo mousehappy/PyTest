@@ -1,7 +1,9 @@
 from Crawler.CrawlConfig import G_Config
+from Crawler.StockDetailCrawler import StockDetailCrawler
+from test.test_iterlen import len
+from lxml import etree
+from Crawler.CrawlServer import CrawlServer
 
-def testparam(db_str, **args):
-    print db_str
-    print args
-    
-testparam(G_Config.data_dir, encoding='latin1', echo=True)
+CS = CrawlServer()
+
+CS.check_stock_base_info()
