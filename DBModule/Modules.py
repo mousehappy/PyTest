@@ -8,7 +8,7 @@ from sqlalchemy.schema import Index, ForeignKey
 from Crawler.CrawlConfig import G_Config
 
 class DB_Base:
-    __base = declarative_base()
+    G_Base = declarative_base()
     __engine = None
     __session_pool = None
     def __init__(self, engine=None, config=None):
@@ -27,7 +27,7 @@ class DB_Base:
         print "You need input your engine!!!"
     
     def get_base(self):
-        return DB_Base.__base
+        return DB_Base.G_Base
     
     def get_session(self, engine = None):
         if DB_Base.__session_pool != None:
@@ -49,9 +49,9 @@ class DB_Base:
 
 G_DB = DB_Base(G_Config.db_str, G_Config.db_args)
 
-__Base = G_DB.get_base()
+G_Base = G_DB.get_base()
 
-class StockManagement(__Base):
+class StockManagement(G_Base):
     __tablename__= 'stock_management'
     id = Column(String(8), primary_key=True)
     market = Column(String(4), nullable = True)
@@ -72,19 +72,19 @@ class StockManagement(__Base):
     def __repr__(self):
         return "<Stock(id='%s', name='%s',status='%s','last_crawl_date'='%s')>" % (self.id, self.name, self.status, self.data_end_date)
     
-class CSRCCategory(__Base):
+class CSRCCategory(G_Base):
     __tablename__='csrc_category'
     id = Column(Integer, Sequence('csrc_id_seq'), unique=True)
     name = Column(String(20), primary_key=True, unique=True)
     cate_type = Column(Integer, default = 0)
     parent_cate = Column(Integer, default = 0)
     
-class SSECategory(__Base):
+class SSECategory(G_Base):
     __tablename__='sse_category'
     id = Column(Integer, Sequence('sse_id_seq'), unique=True)
     name = Column(String(20), primary_key=True, unique=True)
     
-class StockBaseInfo(__Base):
+class StockBaseInfo(G_Base):
     __tablename__='stock_base_info'
     id = Column(String(8), primary_key=True)
     name = Column(String(30), nullable = True)
@@ -103,7 +103,7 @@ class StockBaseInfo(__Base):
     nontradable_share = Column(BigInteger)
     nontradable_rate = Column(Float)
 
-class StockDailyRecord(__Base):
+class StockDailyRecord(G_Base):
     __tablename__= 'stock_daily_record'
     stock_id = Column(String(8), primary_key=True)
     trade_date = Column(Date, primary_key=True)
@@ -112,19 +112,23 @@ class StockDailyRecord(__Base):
     high_price = Column(Float)
     low_price = Column(Float)
     variation = Column(Float, default = 0)
+    variat_rate = Column(Float, default = 0)
     amplitude = Column(Float, default = 0)
-    trade_amout = Column(Integer)
+    trade_amount = Column(Integer)
     trade_count = Column(Integer)
-    sell_amout = Column(Integer)
+    sell_amount = Column(Integer)
     sell_count = Column(Integer)
-    buy_amout = Column(Integer)
+    sell_rate = Column(Float, default = 0)
+    buy_amount = Column(Integer)
     buy_count = Column(Integer)
-    neutral_amout = Column(Integer)
+    buy_rate = Column(Float, default = 0)
+    neutral_amount = Column(Integer)
     neutral_count = Column(Integer)
+    neutral_rate = Column(Float, default = 0)
     exchage_rate = Column(Float, default = 0)
     insert_timestamp = Column(DateTime, default = func.current_timestamp())
 
-class stocktbl0(__Base):
+class stocktbl0(G_Base):
     __tablename__= 'stocktbl0'
     id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
     stock_id = Column(String(8))
@@ -140,7 +144,7 @@ class stocktbl0(__Base):
     
 Index('stocktbl0_index',stocktbl0.stock_id,stocktbl0.bigvolumn_status,stocktbl0.trade_date,stocktbl0.trade_time)
 
-class stocktbl1(__Base):
+class stocktbl1(G_Base):
     __tablename__= 'stocktbl1'
     id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
     stock_id = Column(String(8))
@@ -156,7 +160,7 @@ class stocktbl1(__Base):
     
 Index('stocktbl1_index',stocktbl1.stock_id,stocktbl1.bigvolumn_status,stocktbl1.trade_date,stocktbl1.trade_time)
     
-class stocktbl2(__Base):
+class stocktbl2(G_Base):
     __tablename__= 'stocktbl2'
     id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
     stock_id = Column(String(8))
@@ -172,7 +176,7 @@ class stocktbl2(__Base):
     
 Index('stocktbl2_index',stocktbl2.stock_id,stocktbl2.bigvolumn_status,stocktbl2.trade_date,stocktbl2.trade_time)
     
-class stocktbl3(__Base):
+class stocktbl3(G_Base):
     __tablename__= 'stocktbl3'
     id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
     stock_id = Column(String(8))
@@ -188,7 +192,7 @@ class stocktbl3(__Base):
     
 Index('stocktbl3_index',stocktbl3.stock_id,stocktbl3.bigvolumn_status,stocktbl3.trade_date,stocktbl3.trade_time)
     
-class stocktbl4(__Base):
+class stocktbl4(G_Base):
     __tablename__= 'stocktbl4'
     id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
     stock_id = Column(String(8))
@@ -204,7 +208,7 @@ class stocktbl4(__Base):
     
 Index('stocktbl4_index',stocktbl4.stock_id,stocktbl4.bigvolumn_status,stocktbl4.trade_date,stocktbl4.trade_time)
     
-class stocktbl5(__Base):
+class stocktbl5(G_Base):
     __tablename__= 'stocktbl5'
     id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
     stock_id = Column(String(8))
@@ -220,7 +224,7 @@ class stocktbl5(__Base):
     
 Index('stocktbl5_index',stocktbl5.stock_id,stocktbl5.bigvolumn_status,stocktbl5.trade_date,stocktbl5.trade_time)
     
-class stocktbl6(__Base):
+class stocktbl6(G_Base):
     __tablename__= 'stocktbl6'
     id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
     stock_id = Column(String(8))
@@ -236,7 +240,7 @@ class stocktbl6(__Base):
     
 Index('stocktbl6_index',stocktbl6.stock_id,stocktbl6.bigvolumn_status,stocktbl6.trade_date,stocktbl6.trade_time)
     
-class stocktbl7(__Base):
+class stocktbl7(G_Base):
     __tablename__= 'stocktbl7'
     id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
     stock_id = Column(String(8))
@@ -252,7 +256,7 @@ class stocktbl7(__Base):
     
 Index('stocktbl7_index',stocktbl7.stock_id,stocktbl7.bigvolumn_status,stocktbl7.trade_date,stocktbl7.trade_time)
     
-class stocktbl8(__Base):
+class stocktbl8(G_Base):
     __tablename__= 'stocktbl8'
     id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
     stock_id = Column(String(8))
@@ -268,7 +272,7 @@ class stocktbl8(__Base):
     
 Index('stocktbl8_index',stocktbl8.stock_id,stocktbl8.bigvolumn_status,stocktbl8.trade_date,stocktbl8.trade_time)
     
-class stocktbl9(__Base):
+class stocktbl9(G_Base):
     __tablename__= 'stocktbl9'
     id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
     stock_id = Column(String(8))

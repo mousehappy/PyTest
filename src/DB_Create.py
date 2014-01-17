@@ -1,7 +1,6 @@
 from DBModule.Modules import *
+from DBModule.DailyPriceTable import *
+from DBModule.BigDailyPriceTable import *
 
-DB = DB_Base("mysql://root:admin@localhost:3306/MyStock?charset=utf8")
 
-Base = DB.get_base()
-
-Base.metadata.create_all(DB.get_engine())
+G_Base.metadata.create_all(G_DB.get_engine())
