@@ -5,6 +5,8 @@ from sqlalchemy.sql import or_
 from datetime import timedelta
 from CrawlConfig import G_Config
 from exceptions import Exception
+from DBModule.DailyPriceTable import *
+from DBModule.BigDailyPriceTable import *
 import os
 
 class ProcessManager():
@@ -89,6 +91,30 @@ class ProcessManager():
         sell_rate = 0
         neutral_rate = 0
         
+        #price table
+        PriceDictCount = {}
+        SellPriceDictCount = {}
+        BuyPriceDictCount = {}
+        PriceDictAmount = {}
+        SellPriceDictAmount = {}
+        BuyPriceDictAmount = {}
+        
+        BigPriceDictCount = {}
+        BigSellPriceDictCount = {}
+        BigBuyPriceDictCount = {}
+        BigPriceDictAmount = {}
+        BigSellPriceDictAmount = {}
+        BigBuyPriceDictAmount = {}
+        BigTypes = [201, 202, 205, 210, 220, 250, 300, 400, 500]
+        for t in BigTypes:
+            BigPriceDictCount[t] = {}
+            BigSellPriceDictCount[t] = {}
+            BigBuyPriceDictCount[t] = {}
+            BigPriceDictAmount[t] = {}
+            BigSellPriceDictAmount[t] = {}
+            BigBuyPriceDictAmount[t] = {}
+         
+        
         for i in xrange(1, len(trades)):
             line = trades[i].strip('\n')
             fields = line.split('\t')
@@ -163,6 +189,26 @@ class ProcessManager():
                 BigAmount.trade_value = t_amount
                 BigAmount.trade_status = t_style
                 session.merge(BigAmount)
+            
+            #calculate price table
+            PriceDictCount[t_price] = PriceDictCount.setdefault(t_price, 0) + t_count
+            PriceDictAmount[t_price] = PriceDictAmount.setdefault(t_price, 0) + t_amount
+            if t_style == 1:
+                BuyPriceDictCount[t_price] = BuyPriceDictCount.setdefault(t_price, 0) + t_count
+                BuyPriceDictAmount[t_price] = BuyPriceDictAmount.setdefault(t_price, 0) + t_amount
+            elif t_style == 2:
+                SellPriceDictCount[t_price] = SellPriceDictCount.setdefault(t_price, 0) + t_count
+                SellPriceDictAmount[t_price] = SellPriceDictAmount.setdefault(t_price, 0) + t_amount
+            
+            if BigType != 0:
+                BigPriceDictCount[BigType][t_price] = BigPriceDictCount[BigType].setdefault(t_price, 0) + t_count
+                BigPriceDictAmount[BigType][t_price] = BigPriceDictAmount[BigType].setdefault(t_price, 0) + t_amount
+                if t_style == 1:
+                    BigBuyPriceDictCount[BigType][t_price] = BigBuyPriceDictCount[BigType].setdefault(t_price, 0) + t_count
+                    BigBuyPriceDictAmount[BigType][t_price] = BigBuyPriceDictAmount[BigType].setdefault(t_price, 0) + t_amount
+                elif t_style == 2:
+                    BigSellPriceDictCount[BigType][t_price] = BigSellPriceDictCount[BigType].setdefault(t_price, 0) + t_count
+                    BigSellPriceDictAmount[BigType][t_price] = BigSellPriceDictAmount[BigType].setdefault(t_price, 0) + t_amount
         
         #calculate price variation
         last_day = session.query(StockDailyRecord).filter(StockDailyRecord.stock_id == stockid).order_by(StockDailyRecord.trade_date.desc()).first()
@@ -200,6 +246,46 @@ class ProcessManager():
         SDR.neutral_count = neutral_count
         SDR.neutral_rate = neutral_rate        
         session.merge(SDR)
+        
+        #save price table to DB
+        
+        
+        '''tbl_name = 'BigDailyPriceTable' + stockid[-1] + '()'
+        BDPT = eval(tbl_name)
+        tbl_name = 'BigBuyDailyPriceTable' + stockid[-1] + '()'
+        BBDPT = eval(tbl_name)
+        tbl_name = 'BigSellDailyPriceTable' + stockid[-1] + '()'
+        BSDPT = eval(tbl_name)'''
+
+        for price in PriceDictCount:
+            tbl_name = 'DailyPriceTable' + stockid[-1] + '()'
+            DPT = eval(tbl_name)
+            DPT.stock_id = stockid
+            DPT.trade_date = datadate
+            DPT.price = price
+            DPT.count = PriceDictCount[price]
+            DPT.amount = PriceDictAmount[price]
+            session.merge(DPT)
+        
+        for price in BuyPriceDictCount:
+            tbl_name = 'BuyDailyPriceTable' + stockid[-1] + '()'
+            BDPT = eval(tbl_name)
+            BDPT.stock_id = stockid
+            BDPT.trade_date = datadate
+            BDPT.price = price
+            BDPT.count = BuyPriceDictCount[price]
+            BDPT.amount = BuyPriceDictAmount[price]
+            session.merge(BDPT)
+        
+        for price in SellPriceDictCount:
+            tbl_name = 'SellDailyPriceTable' + stockid[-1] + '()'
+            SDPT = eval(tbl_name)
+            SDPT.stock_id = stockid
+            SDPT.trade_date = datadate
+            SDPT.price = price
+            SDPT.count = SellPriceDictCount[price]
+            SDPT.amount = SellPriceDictAmount[price]
+            session.merge(SDPT)
         
         session.commit()
         session.close()

@@ -7,10 +7,11 @@ import os
 import platform
 import sys
 
-print platform.system()
-print platform.version()
-print platform.architecture()
-print sys.version
+d = {}
+
+d['wsz'] = d.setdefault('wsz',0) + 20
+d['wsz'] = d.setdefault('wsz',0) + 10
+print d['wsz']
 #CS = CrawlServer()
 
 #CS.check_stock_base_info()
