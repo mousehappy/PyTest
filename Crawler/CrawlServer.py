@@ -181,10 +181,9 @@ class CrawlServer(object):
 
         session.commit()
         session.close()
-<<<<<<< HEAD
         self.__CrawlManager.clear()
             
-=======
+
     
     def check_stock_base_info(self):
         session = self.__DB.get_session()
@@ -312,6 +311,3 @@ class CrawlServer(object):
             
         session.commit()
         session.close()
-
-        
->>>>>>> ec6bf42550f8595a9e8f61c26dcc7b6eff52fa15

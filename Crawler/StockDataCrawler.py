@@ -79,23 +79,15 @@ class StockDataCrawler(threading.Thread):
                     sys.stderr.flush()
                     if try_i == 3:
                         self.record_error(self, stockid, crawldate)
-<<<<<<< HEAD
                     else:
                         time.sleep(2)
-=======
->>>>>>> ec6bf42550f8595a9e8f61c26dcc7b6eff52fa15
                 else:
                     content = buf.getvalue().decode('gb2312')
                     if len(content) == 0:
                         self.record_error(stockid, crawldate)
                     elif len(content) > 1000:
-<<<<<<< HEAD
-                        file_name = self.__data_dir+"/"+stockid+"/"+crawldate_str+".txt"
-                        file = open(file_name,'w+')
-=======
                         file_name = self.__data_dir + "\\" + stockid[2:] + "\\" + crawldate_str + ".txt"
                         file = open(file_name, 'w+')
->>>>>>> ec6bf42550f8595a9e8f61c26dcc7b6eff52fa15
                         file.write(content)
                         file.close()
                     break

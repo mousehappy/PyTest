@@ -30,11 +30,6 @@ a = crawler.get_stock_dict().items()[0][1]
 
 stock_dict = crawler.get_stock_dict();
 
-<<<<<<< HEAD:src/crawl_test.py
-#db_stocks = session.query(StockManagement).filter(StockManagement.id in stock_dict.keys()).all();
-
-=======
->>>>>>> ec6bf42550f8595a9e8f61c26dcc7b6eff52fa15:src/stock_list_crawl.py
 for key in stock_dict:
     #value = value.decode('utf-8').encode('gb2312')
     #retStr = value.decode('hex')

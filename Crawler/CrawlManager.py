@@ -7,11 +7,7 @@ from StockCrawler import StockCrawler
 import threading
 from StockDataCrawler import StockDataCrawler
 import os
-<<<<<<< HEAD
-from Crawler.CrawlConfig import G_Config
-=======
 from CrawlConfig import G_Config
->>>>>>> ec6bf42550f8595a9e8f61c26dcc7b6eff52fa15
 
 class CrawlManager:
     __start_date = date(2000,01,01)
