@@ -60,6 +60,7 @@ class StockManagement(G_Base):
     data_begin_date = Column(Date, nullable = True)
     data_end_date = Column(Date, nullable = True)
     processed_date = Column(Date, nullable = True)
+    finace_date = Column(String(10), nullable = True)
     insert_timestamp = Column(DateTime, default = func.current_timestamp())
     update_timestamp = Column(DateTime, nullable = True)
     
