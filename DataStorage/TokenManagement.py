@@ -7,11 +7,12 @@ class TokenManagement():
     __DB = None
     
     def __init__(self):
-        self.db_con = G_DB
+        self.__DB = G_DB
         
     def get_initial_token(self):
         session = self.__DB.get_session()
         stocks = session.query(StockManagement).filter(or_(StockManagement.status==0, StockManagement.status == None)).limit(20).all()
+        session.expunge_all()
         session.close()
         stockids = []
         for stock in stocks:
@@ -21,6 +22,7 @@ class TokenManagement():
     def get_all_error_token(self):
         session = self.__DB.get_session()
         stocks = session.query(StockManagement).filter(StockManagement.status==3).all()
+        session.expunge_all()
         session.close()
         stockids = []
         for stock in stocks:
@@ -30,6 +32,7 @@ class TokenManagement():
     def get_error_token(self):
         session = self.__DB.get_session()
         stocks = session.query(StockManagement).filter(StockManagement.status==3).limit(20).all()
+        session.expunge_all()
         session.close()
         return stocks
     
@@ -54,3 +57,11 @@ class TokenManagement():
         session.commit()
         session.close()
         self.__CrawlManager.clear()
+        
+    def get_initial_finance(self):
+        session = self.__DB.get_session()
+        tokens = session.query(StockManagement).filter(StockManagement.status < 100, StockManagement.status > 0).limit(1).all()
+        session.expunge_all()
+        session.close()
+        stocks = [(token.id, token.market, token.finance_year, token.finance_year) for token in tokens]
+        return stocks

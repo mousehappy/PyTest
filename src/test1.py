@@ -1,9 +1,3 @@
-from DBModule.Modules import *
+from datetime import date
 
-stockid = 'sz000893'
-
-m_name = 'stocktbl'+stockid[-1]+'()'
-
-a = eval(m_name)
-
-print a
+print date.today().year

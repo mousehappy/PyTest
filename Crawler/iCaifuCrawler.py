@@ -7,7 +7,7 @@ class iCaifuCrawler():
     def __init__(self):
         pass
     
-    def CrawlFinaceIndex(self, stockid, market, year, num):
+    def CrawlFinaceIndex(self, stockid, market, year, num = None):
         api = 'v1/stock/finance_index'
         
         params = {}
@@ -17,7 +17,8 @@ class iCaifuCrawler():
         params['seq'] = G_Config.icaifu_seq
         params['symbol'] = stockid + '.' + market
         params['year'] = year
-        params['type'] = num
+        if num:
+            params['type'] = num
         
         sortd_params = self.SortParams(params)
         
