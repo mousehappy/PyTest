@@ -7,8 +7,8 @@ from CrawlManager import CrawlManager
 from StockDetailCrawler import StockDetailCrawler
 from datetime import date, timedelta, datetime
 import time
-from MySQLdb.constants.FIELD_TYPE import NULL
 from DBModule.Modules import G_DB
+from CrawlConfig import G_Config
 import Utilit
 
 class CrawlServer(object):
@@ -45,6 +45,7 @@ class CrawlServer(object):
         stock_count = len(stocks)
         while stock_count != 0:
             task_dict = {}
+            print 'start crawl stocks:',stocks
             for stock in stocks:
                 task_dict.setdefault(stock, []).append(start_date)
                 task_dict[stock].append(end_date)
@@ -55,6 +56,7 @@ class CrawlServer(object):
             self.waiting_for_crawl()
             error_records = self.__CrawlManager.get_errors()
             self.complete_crawl(task_dict, error_records)
+            print 'finish crawl stocks:',stocks
             stocks = self.get_initial_token()
             stock_count = len(stocks)
         
@@ -120,25 +122,25 @@ class CrawlServer(object):
             
     def get_initial_token(self):
         session = self.__DB.get_session()
-        stocks = session.query(StockManagement).filter(or_(StockManagement.status==0, StockManagement.status == None)).limit(20).all()
+        stocks = session.query(StockManagement).filter(or_(StockManagement.status==0, StockManagement.status == None)).limit(G_Config.token_limit).all()
         session.close()
-        stockids = []
-        for stock in stocks:
-            stockids.append(stock.market + stock.id)
+        stockids = [stock.market + stock.id for stock in stocks]
+        #for stock in stocks:
+        #    stockids.append(stock.market + stock.id)
         return stockids
             
     def get_all_error_token(self):
         session = self.__DB.get_session()
         stocks = session.query(StockManagement).filter(StockManagement.status==3).all()
         session.close()
-        stockids = []
-        for stock in stocks:
-            stockids.append(stock.market + stock.id)
+        stockids = [stock.market + stock.id for stock in stocks]
+        #for stock in stocks:
+        #    stockids.append(stock.market + stock.id)
         return stockids
     
     def get_error_token(self):
         session = self.__DB.get_session()
-        stocks = session.query(StockManagement).filter(StockManagement.status==3).limit(20).all()
+        stocks = session.query(StockManagement).filter(StockManagement.status==3).limit(G_Config.token_limit).all()
         session.close()
         return stocks
     
@@ -166,7 +168,7 @@ class CrawlServer(object):
         crawled_stocks = session.query(StockManagement).filter(StockManagement.id in task_dict.keys()).all()
         for stockid in task_dict:
             SM = StockManagement()
-            SM.id = stockid
+            SM.id = stockid[2:]
             SM.data_begin_date = task_dict[stockid][0]
             SM.data_end_date = task_dict[stockid][1]
             SM.status = 2
@@ -174,7 +176,7 @@ class CrawlServer(object):
         
         for stockid in error_records:
             SM = StockManagement()
-            SM.id = stockid
+            SM.id = stockid[2:]
             SM.status = 3
             SM.data_end_date = error_records[stockid]- timedelta(1)
             SM = session.merge(SM)

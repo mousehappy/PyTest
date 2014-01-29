@@ -28,29 +28,46 @@ class ProcessManager():
         NowDateStr = NowDate.isoformat()
         
         stocks = session.query(StockManagement, StockBaseInfo).filter(StockManagement.id == StockBaseInfo.id, StockManagement.status == 2)\
-        .filter(or_(StockManagement.processed_date == None, StockManagement.processed_date < StockManagement.data_end_date)).all()
+        .filter(or_(StockManagement.processed_date == None, StockManagement.processed_date < StockManagement.data_end_date)).limit(5).all()
         
-        #session.commit()
-        session.expunge_all()
+        for stock in stocks:
+            #SM = StockManagement()
+            #SM.id = stock[0].id
+            stock[0].status = 5
+        
+        session.commit()
+        session.expunge_all() 
         session.close()
         return stocks
     
     def ProcessData(self):
         stocks = self.GetProcessStocks()
-        for stock in stocks:
-            SM = stock[0]
-            SBI = stock[1]
-            ATradeShare = SBI.tradable_share
-            startdate = SM.data_begin_date
-            enddate = SM.data_end_date
-            if SM.processed_date != None:
-                startdate = SM.processed_date + timedelta(1)
-            DateDiff = enddate - startdate
-            for i in xrange(0, DateDiff.days):
-            #for i in xrange(0, 10):
-                DataDate = startdate + timedelta(i)
-                self.ProcessStock(SM.id, DataDate, ATradeShare)
-        
+        while len(stocks) > 0:
+            print 'Start processing stock data:',[stock[0].id for stock in stocks]
+            for stock in stocks:
+                SM = stock[0]
+                SBI = stock[1]
+                ATradeShare = SBI.tradable_share
+                startdate = SM.data_begin_date
+                enddate = SM.data_end_date
+                if SM.processed_date != None:
+                    startdate = SM.processed_date + timedelta(1)
+                DateDiff = enddate - startdate
+                for i in xrange(0, DateDiff.days):
+                #for i in xrange(0, 10):
+                    DataDate = startdate + timedelta(i)
+                    self.ProcessStock(SM.id, DataDate, ATradeShare)
+                self.FinishProcessStock(SM.id, enddate)
+            print 'Finish processing stock data:',[stock[0].id for stock in stocks]
+            stocks = self.GetProcessStocks()
+    
+    def FinishProcessStock(self, stockid, enddate):
+        session = self.__DB.get_session()
+        SM = StockManagement()
+        SM.id = stockid
+        SM.status = 2
+        SM.processed_date = enddate
+        session.close() 
     
     def ProcessStock(self, stockid, datadate, ATradeShare):
         StockPath = self.__data_dir
@@ -212,10 +229,11 @@ class ProcessManager():
         
         #calculate price variation
         last_day = session.query(StockDailyRecord).filter(StockDailyRecord.stock_id == stockid).order_by(StockDailyRecord.trade_date.desc()).first()
-        variation = end_price - init_price
+        
         max_diff = high_price - low_price
         if last_day != None:
             last_price = last_day.end_price
+            variation = end_price - last_price
             variat_rate = round(variation / last_price, 4) * 100
             amplitude = round(max_diff / last_price, 4) * 100
         exchange_rate = round(float(trade_count) * 100 / ATradeShare, 6) * 100
@@ -286,6 +304,53 @@ class ProcessManager():
             SDPT.count = SellPriceDictCount[price]
             SDPT.amount = SellPriceDictAmount[price]
             session.merge(SDPT)
+        
+        for i in xrange(len(BigTypes)):
+            now_name = BigTypes[i]
+            if i > 0:
+                last_name = BigTypes[i-1]
+                for key in BigPriceDictCount[last_name]:
+                    BigPriceDictCount[now_name][key] = BigPriceDictCount[now_name].setdefault(key,0) + BigPriceDictCount[last_name][key]
+                    BigPriceDictAmount[now_name][key] = BigPriceDictAmount[now_name].setdefault(key,0) + BigPriceDictAmount[last_name][key]
+                for key in BigSellPriceDictCount[last_name]:
+                    BigSellPriceDictCount[now_name][key] = BigSellPriceDictCount[now_name].setdefault(key,0) + BigSellPriceDictCount[last_name][key]
+                    BigSellPriceDictAmount[now_name][key] = BigSellPriceDictAmount[now_name].setdefault(key,0) + BigSellPriceDictAmount[last_name][key]
+                for key in BigBuyPriceDictCount[last_name]:
+                    BigBuyPriceDictCount[now_name][key] = BigBuyPriceDictCount[now_name].setdefault(key,0) + BigBuyPriceDictCount[last_name][key] 
+                    BigBuyPriceDictAmount[now_name][key] = BigBuyPriceDictAmount[now_name].setdefault(key,0) + BigBuyPriceDictAmount[last_name][key]
+            
+            for price in BigPriceDictCount[now_name]:
+                tbl_name = 'BigDailyPriceTable' + stockid[-1] + '()'
+                BDPT = eval(tbl_name)
+                BDPT.stock_id = stockid
+                BDPT.trade_date = datadate
+                BDPT.price = price
+                BDPT.count = BigPriceDictCount[now_name][price]
+                BDPT.amount = BigPriceDictAmount[now_name][price]
+                BDPT.big_type = now_name
+                session.merge(BDPT)
+            
+            for price in BigSellPriceDictCount[now_name]:
+                tbl_name = 'SellBigDailyPriceTable' + stockid[-1] + '()'
+                SBDPT = eval(tbl_name)
+                SBDPT.stock_id = stockid
+                SBDPT.trade_date = datadate
+                SBDPT.price = price
+                SBDPT.count = BigSellPriceDictCount[now_name][price]
+                SBDPT.amount = BigSellPriceDictAmount[now_name][price]
+                SBDPT.big_type = now_name
+                session.merge(SBDPT)
+            
+            for price in BigBuyPriceDictCount[now_name]:
+                tbl_name = 'BuyBigDailyPriceTable' + stockid[-1] + '()'
+                BBDPT = eval(tbl_name)
+                BBDPT.stock_id = stockid
+                BBDPT.trade_date = datadate
+                BBDPT.price = price
+                BBDPT.count = BigBuyPriceDictCount[now_name][price]
+                BBDPT.amount = BigBuyPriceDictCount[now_name][price]
+                BBDPT.big_type = now_name
+                session.merge(BBDPT)
         
         session.commit()
         session.close()

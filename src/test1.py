@@ -1,9 +1,14 @@
-from DBModule.Modules import *
+import platform
 
-stockid = 'sz000893'
+print platform.architecture()
 
-m_name = 'stocktbl'+stockid[-1]+'()'
 
-a = eval(m_name)
+a = {'wsz':1, 'wsz2':2}
 
-print a
+b = a
+
+b['wsz3'] = 3
+b['wsz'] = 4
+
+print a.get('wsz')
+print 5+int(a.get('111'))

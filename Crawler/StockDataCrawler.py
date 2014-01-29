@@ -73,29 +73,37 @@ class StockDataCrawler(threading.Thread):
                 try:
                     curl.perform()
                 except:
-                    print "exception occured in crawl"
+                    print 'exception occured in crawl stockid:%s, crawldate:%s, try_time:%s'%(stockid,crawldate.isoformat(),try_i)
+                    log_file = open('/Users/shwang/Stock_log.txt','w+')
+                    log_file.write("exception occured in crawl stockid:%s, crawldate:%s, try_time:%s"%(stockid, crawldate.isoformat(), try_i))
+                    log_file.close()
                     import traceback
                     traceback.print_exc(file=sys.stderr)
+                    #sys.stderr.write("stockid:%s, crawldate:%s"%(stockid, crawldate.isoformat()))
                     sys.stderr.flush()
                     if try_i == 3:
                         self.record_error(self, stockid, crawldate)
                     else:
                         time.sleep(2)
                 else:
-                    content = buf.getvalue().decode('gb2312')
+                    content = buf.getvalue().decode('gb2312').encode('utf-8')
                     if len(content) == 0:
                         self.record_error(stockid, crawldate)
                     elif len(content) > 1000:
-                        file_name = self.__data_dir + "\\" + stockid[2:] + "\\" + crawldate_str + ".txt"
-                        file = open(file_name, 'w+')
-                        file.write(content)
-                        file.close()
+                        try:
+                            file_name = self.__data_dir + "/" + stockid[2:] + "/" + crawldate_str + ".txt"
+                            file = open(file_name, 'w+')
+                            file.write(content)
+                            file.close()
+                        except:
+                            print "Failed stockid:%s, crawldate:%s"%(stockid, crawldate.isoformat())
+                            return
                     break
             else:
                 self.queue.put((stockid, crawldate))
             buf.close()
             curl.close()
-            print "Crawl stock %s of %s finished!" % (stockid, crawldate)
+            #print "Crawl stock %s of %s finished!" % (stockid, crawldate)
     
     
     def record_error(self, stockid, crawldate):

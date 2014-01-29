@@ -33,11 +33,11 @@ class DB_Base:
         if DB_Base.__session_pool != None:
             return DB_Base.__session_pool()
         if DB_Base.__engine != None:
-            DB_Base.__session_pool = sessionmaker(bind=DB_Base.__engine)
+            DB_Base.__session_pool = sessionmaker(bind=DB_Base.__engine, expire_on_commit=False)
             return DB_Base.__session_pool()
         if engine != None:
             DB_Base.__engine = create_engine(engine)
-            DB_Base.__session_pool = sessionmaker(bind=DB_Base.__engine)
+            DB_Base.__session_pool = sessionmaker(bind=DB_Base.__engine, expire_on_commit=False)
             return DB_Base.__session_pool()
         print "Need an engine first!!!"
 

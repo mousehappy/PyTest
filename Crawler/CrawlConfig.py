@@ -11,6 +11,8 @@ class CrawlConfig:
             self.data_dir = "C:\\StockData"
         else:
             self.data_dir = "/Users/shwang/StockData"
+            
+        self.token_limit = 5
 
         #self.db_args["convert_unicode"] = True
         #self.db_args["encoding"] = 'utf-8'
