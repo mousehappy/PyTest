@@ -60,14 +60,8 @@ class CrawlServer(object):
             self.__Crawl_Finish = False
             self.waiting_for_crawl()
             error_records = self.__CrawlManager.get_errors()
-<<<<<<< HEAD
-            self.complete_crawl(task_dict, error_records)
-            print 'finish crawl stocks:',stocks
-            stocks = self.get_initial_token()
-=======
             self.__TM.complete_crawl(task_dict, error_records)
             stocks = self.__TM.get_initial_token()
->>>>>>> a8971330a9f3e56a902b5d14f17489115b3f215a
             stock_count = len(stocks)
         
         error_sms = self.__TM.get_error_token()
@@ -89,73 +83,6 @@ class CrawlServer(object):
         
         print "Initial crawl finished!!"
                 #task_dict.setdefault(stock.id, []).append()
-<<<<<<< HEAD
-                
-    def test_error_crawl(self):
-        end_date = date.today()
-        end_date = self.check_date(end_date)
-        error_sms = self.get_error_token()
-        stock_count = len(error_sms)
-        while stock_count != 0:
-            task_dick = {}
-            for stock in error_sms:
-                stockid = stock.id
-                stock_begin_date = stock.data_begin_date
-                stock_end_date = stock.data_end_date
-                year = stock_begin_date[:4]
-                month = stock_begin_date[5:6]
-                day = stock_begin_date[7:8]
-                error_begin_date = date(year, month, day)
-                task_dick.setdefault(stockid, []).append(error_begin_date)
-                task_dick[stockid].append(end_date)
-    
-    def error_recrawl(self, days = 360, *stockids):
-        #print "argu length: %d"%len(stockids)
-        end_date = date.today()
-        end_date = self.check_date(end_date)
-        start_date = end_date - timedelta(days)
-        stocks = self.get_error_token()
-        stock_count = len(stocks)
-        while stock_count != 0:
-            task_dict = {}
-            for stock in stocks:
-                task_dict.setdefault(stock, []).append(start_date)
-                task_dict[stock].append(end_date)
-            
-            self.__CrawlManager.generate_tasks(tasks = task_dict)
-            self.__CrawlManager.start_crawl()
-            self.__Crawl_Finish = False
-            self.waiting_for_crawl()
-            error_records = self.__CrawlManager.get_errors()
-            self.complete_crawl(task_dict, error_records)
-            stocks = self.get_initial_token()
-            stock_count = len(stocks)
-            
-    def get_initial_token(self):
-        session = self.__DB.get_session()
-        stocks = session.query(StockManagement).filter(or_(StockManagement.status==0, StockManagement.status == None)).limit(G_Config.token_limit).all()
-        session.close()
-        stockids = [stock.market + stock.id for stock in stocks]
-        #for stock in stocks:
-        #    stockids.append(stock.market + stock.id)
-        return stockids
-            
-    def get_all_error_token(self):
-        session = self.__DB.get_session()
-        stocks = session.query(StockManagement).filter(StockManagement.status==3).all()
-        session.close()
-        stockids = [stock.market + stock.id for stock in stocks]
-        #for stock in stocks:
-        #    stockids.append(stock.market + stock.id)
-        return stockids
-    
-    def get_error_token(self):
-        session = self.__DB.get_session()
-        stocks = session.query(StockManagement).filter(StockManagement.status==3).limit(G_Config.token_limit).all()
-        session.close()
-        return stocks
-=======
->>>>>>> a8971330a9f3e56a902b5d14f17489115b3f215a
     
     def waiting_for_crawl(self):
         while True:
@@ -175,31 +102,6 @@ class CrawlServer(object):
                 print task
             except:
                 break
-<<<<<<< HEAD
-    
-    def complete_crawl(self, task_dict, error_records):
-        session = self.__DB.get_session()
-        crawled_stocks = session.query(StockManagement).filter(StockManagement.id in task_dict.keys()).all()
-        for stockid in task_dict:
-            SM = StockManagement()
-            SM.id = stockid[2:]
-            SM.data_begin_date = task_dict[stockid][0]
-            SM.data_end_date = task_dict[stockid][1]
-            SM.status = 2
-            SM = session.merge(SM)
-        
-        for stockid in error_records:
-            SM = StockManagement()
-            SM.id = stockid[2:]
-            SM.status = 3
-            SM.data_end_date = error_records[stockid]- timedelta(1)
-            SM = session.merge(SM)
-
-        session.commit()
-        session.close()
-        self.__CrawlManager.clear()
-=======
->>>>>>> a8971330a9f3e56a902b5d14f17489115b3f215a
             
     def check_stock_base_info(self):
         session = self.__DB.get_session()

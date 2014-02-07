@@ -63,5 +63,5 @@ class TokenManagement():
         tokens = session.query(StockManagement).filter(StockManagement.status < 100, StockManagement.status > 0).limit(1).all()
         session.expunge_all()
         session.close()
-        stocks = [(token.id, token.market, token.finance_year, token.finance_year) for token in tokens]
+        stocks = [(token.id, token.market, token.finance_year, token.finance_num) for token in tokens]
         return stocks

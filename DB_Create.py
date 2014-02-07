@@ -1,6 +1,7 @@
 from DBModule.Modules import *
 from DBModule.DailyPriceTable import *
 from DBModule.BigDailyPriceTable import *
+from DBModule.TradeRecordTbl import *
 
 #G_Base.metadata.drop_all(G_DB.get_engine())
 

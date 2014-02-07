@@ -1,0 +1,1600 @@
+class stocktbl0(G_Base):
+    __tablename__= 'stocktbl0'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl0_index',stocktbl0.stock_id,stocktbl0.bigvolumn_status,stocktbl0.trade_date,stocktbl0.trade_time)
+
+class stocktbl1(G_Base):
+    __tablename__= 'stocktbl1'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl1_index',stocktbl1.stock_id,stocktbl1.bigvolumn_status,stocktbl1.trade_date,stocktbl1.trade_time)
+
+class stocktbl2(G_Base):
+    __tablename__= 'stocktbl2'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl2_index',stocktbl2.stock_id,stocktbl2.bigvolumn_status,stocktbl2.trade_date,stocktbl2.trade_time)
+
+class stocktbl3(G_Base):
+    __tablename__= 'stocktbl3'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl3_index',stocktbl3.stock_id,stocktbl3.bigvolumn_status,stocktbl3.trade_date,stocktbl3.trade_time)
+
+class stocktbl4(G_Base):
+    __tablename__= 'stocktbl4'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl4_index',stocktbl4.stock_id,stocktbl4.bigvolumn_status,stocktbl4.trade_date,stocktbl4.trade_time)
+
+class stocktbl5(G_Base):
+    __tablename__= 'stocktbl5'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl5_index',stocktbl5.stock_id,stocktbl5.bigvolumn_status,stocktbl5.trade_date,stocktbl5.trade_time)
+
+class stocktbl6(G_Base):
+    __tablename__= 'stocktbl6'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl6_index',stocktbl6.stock_id,stocktbl6.bigvolumn_status,stocktbl6.trade_date,stocktbl6.trade_time)
+
+class stocktbl7(G_Base):
+    __tablename__= 'stocktbl7'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl7_index',stocktbl7.stock_id,stocktbl7.bigvolumn_status,stocktbl7.trade_date,stocktbl7.trade_time)
+
+class stocktbl8(G_Base):
+    __tablename__= 'stocktbl8'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl8_index',stocktbl8.stock_id,stocktbl8.bigvolumn_status,stocktbl8.trade_date,stocktbl8.trade_time)
+
+class stocktbl9(G_Base):
+    __tablename__= 'stocktbl9'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl9_index',stocktbl9.stock_id,stocktbl9.bigvolumn_status,stocktbl9.trade_date,stocktbl9.trade_time)
+
+class stocktbl10(G_Base):
+    __tablename__= 'stocktbl10'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl10_index',stocktbl10.stock_id,stocktbl10.bigvolumn_status,stocktbl10.trade_date,stocktbl10.trade_time)
+
+class stocktbl11(G_Base):
+    __tablename__= 'stocktbl11'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl11_index',stocktbl11.stock_id,stocktbl11.bigvolumn_status,stocktbl11.trade_date,stocktbl11.trade_time)
+
+class stocktbl12(G_Base):
+    __tablename__= 'stocktbl12'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl12_index',stocktbl12.stock_id,stocktbl12.bigvolumn_status,stocktbl12.trade_date,stocktbl12.trade_time)
+
+class stocktbl13(G_Base):
+    __tablename__= 'stocktbl13'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl13_index',stocktbl13.stock_id,stocktbl13.bigvolumn_status,stocktbl13.trade_date,stocktbl13.trade_time)
+
+class stocktbl14(G_Base):
+    __tablename__= 'stocktbl14'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl14_index',stocktbl14.stock_id,stocktbl14.bigvolumn_status,stocktbl14.trade_date,stocktbl14.trade_time)
+
+class stocktbl15(G_Base):
+    __tablename__= 'stocktbl15'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl15_index',stocktbl15.stock_id,stocktbl15.bigvolumn_status,stocktbl15.trade_date,stocktbl15.trade_time)
+
+class stocktbl16(G_Base):
+    __tablename__= 'stocktbl16'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl16_index',stocktbl16.stock_id,stocktbl16.bigvolumn_status,stocktbl16.trade_date,stocktbl16.trade_time)
+
+class stocktbl17(G_Base):
+    __tablename__= 'stocktbl17'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl17_index',stocktbl17.stock_id,stocktbl17.bigvolumn_status,stocktbl17.trade_date,stocktbl17.trade_time)
+
+class stocktbl18(G_Base):
+    __tablename__= 'stocktbl18'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl18_index',stocktbl18.stock_id,stocktbl18.bigvolumn_status,stocktbl18.trade_date,stocktbl18.trade_time)
+
+class stocktbl19(G_Base):
+    __tablename__= 'stocktbl19'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl19_index',stocktbl19.stock_id,stocktbl19.bigvolumn_status,stocktbl19.trade_date,stocktbl19.trade_time)
+
+class stocktbl20(G_Base):
+    __tablename__= 'stocktbl20'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl20_index',stocktbl20.stock_id,stocktbl20.bigvolumn_status,stocktbl20.trade_date,stocktbl20.trade_time)
+
+class stocktbl21(G_Base):
+    __tablename__= 'stocktbl21'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl21_index',stocktbl21.stock_id,stocktbl21.bigvolumn_status,stocktbl21.trade_date,stocktbl21.trade_time)
+
+class stocktbl22(G_Base):
+    __tablename__= 'stocktbl22'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl22_index',stocktbl22.stock_id,stocktbl22.bigvolumn_status,stocktbl22.trade_date,stocktbl22.trade_time)
+
+class stocktbl23(G_Base):
+    __tablename__= 'stocktbl23'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl23_index',stocktbl23.stock_id,stocktbl23.bigvolumn_status,stocktbl23.trade_date,stocktbl23.trade_time)
+
+class stocktbl24(G_Base):
+    __tablename__= 'stocktbl24'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl24_index',stocktbl24.stock_id,stocktbl24.bigvolumn_status,stocktbl24.trade_date,stocktbl24.trade_time)
+
+class stocktbl25(G_Base):
+    __tablename__= 'stocktbl25'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl25_index',stocktbl25.stock_id,stocktbl25.bigvolumn_status,stocktbl25.trade_date,stocktbl25.trade_time)
+
+class stocktbl26(G_Base):
+    __tablename__= 'stocktbl26'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl26_index',stocktbl26.stock_id,stocktbl26.bigvolumn_status,stocktbl26.trade_date,stocktbl26.trade_time)
+
+class stocktbl27(G_Base):
+    __tablename__= 'stocktbl27'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl27_index',stocktbl27.stock_id,stocktbl27.bigvolumn_status,stocktbl27.trade_date,stocktbl27.trade_time)
+
+class stocktbl28(G_Base):
+    __tablename__= 'stocktbl28'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl28_index',stocktbl28.stock_id,stocktbl28.bigvolumn_status,stocktbl28.trade_date,stocktbl28.trade_time)
+
+class stocktbl29(G_Base):
+    __tablename__= 'stocktbl29'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl29_index',stocktbl29.stock_id,stocktbl29.bigvolumn_status,stocktbl29.trade_date,stocktbl29.trade_time)
+
+class stocktbl30(G_Base):
+    __tablename__= 'stocktbl30'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl30_index',stocktbl30.stock_id,stocktbl30.bigvolumn_status,stocktbl30.trade_date,stocktbl30.trade_time)
+
+class stocktbl31(G_Base):
+    __tablename__= 'stocktbl31'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl31_index',stocktbl31.stock_id,stocktbl31.bigvolumn_status,stocktbl31.trade_date,stocktbl31.trade_time)
+
+class stocktbl32(G_Base):
+    __tablename__= 'stocktbl32'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl32_index',stocktbl32.stock_id,stocktbl32.bigvolumn_status,stocktbl32.trade_date,stocktbl32.trade_time)
+
+class stocktbl33(G_Base):
+    __tablename__= 'stocktbl33'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl33_index',stocktbl33.stock_id,stocktbl33.bigvolumn_status,stocktbl33.trade_date,stocktbl33.trade_time)
+
+class stocktbl34(G_Base):
+    __tablename__= 'stocktbl34'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl34_index',stocktbl34.stock_id,stocktbl34.bigvolumn_status,stocktbl34.trade_date,stocktbl34.trade_time)
+
+class stocktbl35(G_Base):
+    __tablename__= 'stocktbl35'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl35_index',stocktbl35.stock_id,stocktbl35.bigvolumn_status,stocktbl35.trade_date,stocktbl35.trade_time)
+
+class stocktbl36(G_Base):
+    __tablename__= 'stocktbl36'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl36_index',stocktbl36.stock_id,stocktbl36.bigvolumn_status,stocktbl36.trade_date,stocktbl36.trade_time)
+
+class stocktbl37(G_Base):
+    __tablename__= 'stocktbl37'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl37_index',stocktbl37.stock_id,stocktbl37.bigvolumn_status,stocktbl37.trade_date,stocktbl37.trade_time)
+
+class stocktbl38(G_Base):
+    __tablename__= 'stocktbl38'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl38_index',stocktbl38.stock_id,stocktbl38.bigvolumn_status,stocktbl38.trade_date,stocktbl38.trade_time)
+
+class stocktbl39(G_Base):
+    __tablename__= 'stocktbl39'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl39_index',stocktbl39.stock_id,stocktbl39.bigvolumn_status,stocktbl39.trade_date,stocktbl39.trade_time)
+
+class stocktbl40(G_Base):
+    __tablename__= 'stocktbl40'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl40_index',stocktbl40.stock_id,stocktbl40.bigvolumn_status,stocktbl40.trade_date,stocktbl40.trade_time)
+
+class stocktbl41(G_Base):
+    __tablename__= 'stocktbl41'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl41_index',stocktbl41.stock_id,stocktbl41.bigvolumn_status,stocktbl41.trade_date,stocktbl41.trade_time)
+
+class stocktbl42(G_Base):
+    __tablename__= 'stocktbl42'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl42_index',stocktbl42.stock_id,stocktbl42.bigvolumn_status,stocktbl42.trade_date,stocktbl42.trade_time)
+
+class stocktbl43(G_Base):
+    __tablename__= 'stocktbl43'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl43_index',stocktbl43.stock_id,stocktbl43.bigvolumn_status,stocktbl43.trade_date,stocktbl43.trade_time)
+
+class stocktbl44(G_Base):
+    __tablename__= 'stocktbl44'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl44_index',stocktbl44.stock_id,stocktbl44.bigvolumn_status,stocktbl44.trade_date,stocktbl44.trade_time)
+
+class stocktbl45(G_Base):
+    __tablename__= 'stocktbl45'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl45_index',stocktbl45.stock_id,stocktbl45.bigvolumn_status,stocktbl45.trade_date,stocktbl45.trade_time)
+
+class stocktbl46(G_Base):
+    __tablename__= 'stocktbl46'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl46_index',stocktbl46.stock_id,stocktbl46.bigvolumn_status,stocktbl46.trade_date,stocktbl46.trade_time)
+
+class stocktbl47(G_Base):
+    __tablename__= 'stocktbl47'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl47_index',stocktbl47.stock_id,stocktbl47.bigvolumn_status,stocktbl47.trade_date,stocktbl47.trade_time)
+
+class stocktbl48(G_Base):
+    __tablename__= 'stocktbl48'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl48_index',stocktbl48.stock_id,stocktbl48.bigvolumn_status,stocktbl48.trade_date,stocktbl48.trade_time)
+
+class stocktbl49(G_Base):
+    __tablename__= 'stocktbl49'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl49_index',stocktbl49.stock_id,stocktbl49.bigvolumn_status,stocktbl49.trade_date,stocktbl49.trade_time)
+
+class stocktbl50(G_Base):
+    __tablename__= 'stocktbl50'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl50_index',stocktbl50.stock_id,stocktbl50.bigvolumn_status,stocktbl50.trade_date,stocktbl50.trade_time)
+
+class stocktbl51(G_Base):
+    __tablename__= 'stocktbl51'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl51_index',stocktbl51.stock_id,stocktbl51.bigvolumn_status,stocktbl51.trade_date,stocktbl51.trade_time)
+
+class stocktbl52(G_Base):
+    __tablename__= 'stocktbl52'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl52_index',stocktbl52.stock_id,stocktbl52.bigvolumn_status,stocktbl52.trade_date,stocktbl52.trade_time)
+
+class stocktbl53(G_Base):
+    __tablename__= 'stocktbl53'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl53_index',stocktbl53.stock_id,stocktbl53.bigvolumn_status,stocktbl53.trade_date,stocktbl53.trade_time)
+
+class stocktbl54(G_Base):
+    __tablename__= 'stocktbl54'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl54_index',stocktbl54.stock_id,stocktbl54.bigvolumn_status,stocktbl54.trade_date,stocktbl54.trade_time)
+
+class stocktbl55(G_Base):
+    __tablename__= 'stocktbl55'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl55_index',stocktbl55.stock_id,stocktbl55.bigvolumn_status,stocktbl55.trade_date,stocktbl55.trade_time)
+
+class stocktbl56(G_Base):
+    __tablename__= 'stocktbl56'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl56_index',stocktbl56.stock_id,stocktbl56.bigvolumn_status,stocktbl56.trade_date,stocktbl56.trade_time)
+
+class stocktbl57(G_Base):
+    __tablename__= 'stocktbl57'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl57_index',stocktbl57.stock_id,stocktbl57.bigvolumn_status,stocktbl57.trade_date,stocktbl57.trade_time)
+
+class stocktbl58(G_Base):
+    __tablename__= 'stocktbl58'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl58_index',stocktbl58.stock_id,stocktbl58.bigvolumn_status,stocktbl58.trade_date,stocktbl58.trade_time)
+
+class stocktbl59(G_Base):
+    __tablename__= 'stocktbl59'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl59_index',stocktbl59.stock_id,stocktbl59.bigvolumn_status,stocktbl59.trade_date,stocktbl59.trade_time)
+
+class stocktbl60(G_Base):
+    __tablename__= 'stocktbl60'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl60_index',stocktbl60.stock_id,stocktbl60.bigvolumn_status,stocktbl60.trade_date,stocktbl60.trade_time)
+
+class stocktbl61(G_Base):
+    __tablename__= 'stocktbl61'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl61_index',stocktbl61.stock_id,stocktbl61.bigvolumn_status,stocktbl61.trade_date,stocktbl61.trade_time)
+
+class stocktbl62(G_Base):
+    __tablename__= 'stocktbl62'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl62_index',stocktbl62.stock_id,stocktbl62.bigvolumn_status,stocktbl62.trade_date,stocktbl62.trade_time)
+
+class stocktbl63(G_Base):
+    __tablename__= 'stocktbl63'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl63_index',stocktbl63.stock_id,stocktbl63.bigvolumn_status,stocktbl63.trade_date,stocktbl63.trade_time)
+
+class stocktbl64(G_Base):
+    __tablename__= 'stocktbl64'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl64_index',stocktbl64.stock_id,stocktbl64.bigvolumn_status,stocktbl64.trade_date,stocktbl64.trade_time)
+
+class stocktbl65(G_Base):
+    __tablename__= 'stocktbl65'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl65_index',stocktbl65.stock_id,stocktbl65.bigvolumn_status,stocktbl65.trade_date,stocktbl65.trade_time)
+
+class stocktbl66(G_Base):
+    __tablename__= 'stocktbl66'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl66_index',stocktbl66.stock_id,stocktbl66.bigvolumn_status,stocktbl66.trade_date,stocktbl66.trade_time)
+
+class stocktbl67(G_Base):
+    __tablename__= 'stocktbl67'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl67_index',stocktbl67.stock_id,stocktbl67.bigvolumn_status,stocktbl67.trade_date,stocktbl67.trade_time)
+
+class stocktbl68(G_Base):
+    __tablename__= 'stocktbl68'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl68_index',stocktbl68.stock_id,stocktbl68.bigvolumn_status,stocktbl68.trade_date,stocktbl68.trade_time)
+
+class stocktbl69(G_Base):
+    __tablename__= 'stocktbl69'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl69_index',stocktbl69.stock_id,stocktbl69.bigvolumn_status,stocktbl69.trade_date,stocktbl69.trade_time)
+
+class stocktbl70(G_Base):
+    __tablename__= 'stocktbl70'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl70_index',stocktbl70.stock_id,stocktbl70.bigvolumn_status,stocktbl70.trade_date,stocktbl70.trade_time)
+
+class stocktbl71(G_Base):
+    __tablename__= 'stocktbl71'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl71_index',stocktbl71.stock_id,stocktbl71.bigvolumn_status,stocktbl71.trade_date,stocktbl71.trade_time)
+
+class stocktbl72(G_Base):
+    __tablename__= 'stocktbl72'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl72_index',stocktbl72.stock_id,stocktbl72.bigvolumn_status,stocktbl72.trade_date,stocktbl72.trade_time)
+
+class stocktbl73(G_Base):
+    __tablename__= 'stocktbl73'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl73_index',stocktbl73.stock_id,stocktbl73.bigvolumn_status,stocktbl73.trade_date,stocktbl73.trade_time)
+
+class stocktbl74(G_Base):
+    __tablename__= 'stocktbl74'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl74_index',stocktbl74.stock_id,stocktbl74.bigvolumn_status,stocktbl74.trade_date,stocktbl74.trade_time)
+
+class stocktbl75(G_Base):
+    __tablename__= 'stocktbl75'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl75_index',stocktbl75.stock_id,stocktbl75.bigvolumn_status,stocktbl75.trade_date,stocktbl75.trade_time)
+
+class stocktbl76(G_Base):
+    __tablename__= 'stocktbl76'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl76_index',stocktbl76.stock_id,stocktbl76.bigvolumn_status,stocktbl76.trade_date,stocktbl76.trade_time)
+
+class stocktbl77(G_Base):
+    __tablename__= 'stocktbl77'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl77_index',stocktbl77.stock_id,stocktbl77.bigvolumn_status,stocktbl77.trade_date,stocktbl77.trade_time)
+
+class stocktbl78(G_Base):
+    __tablename__= 'stocktbl78'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl78_index',stocktbl78.stock_id,stocktbl78.bigvolumn_status,stocktbl78.trade_date,stocktbl78.trade_time)
+
+class stocktbl79(G_Base):
+    __tablename__= 'stocktbl79'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl79_index',stocktbl79.stock_id,stocktbl79.bigvolumn_status,stocktbl79.trade_date,stocktbl79.trade_time)
+
+class stocktbl80(G_Base):
+    __tablename__= 'stocktbl80'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl80_index',stocktbl80.stock_id,stocktbl80.bigvolumn_status,stocktbl80.trade_date,stocktbl80.trade_time)
+
+class stocktbl81(G_Base):
+    __tablename__= 'stocktbl81'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl81_index',stocktbl81.stock_id,stocktbl81.bigvolumn_status,stocktbl81.trade_date,stocktbl81.trade_time)
+
+class stocktbl82(G_Base):
+    __tablename__= 'stocktbl82'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl82_index',stocktbl82.stock_id,stocktbl82.bigvolumn_status,stocktbl82.trade_date,stocktbl82.trade_time)
+
+class stocktbl83(G_Base):
+    __tablename__= 'stocktbl83'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl83_index',stocktbl83.stock_id,stocktbl83.bigvolumn_status,stocktbl83.trade_date,stocktbl83.trade_time)
+
+class stocktbl84(G_Base):
+    __tablename__= 'stocktbl84'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl84_index',stocktbl84.stock_id,stocktbl84.bigvolumn_status,stocktbl84.trade_date,stocktbl84.trade_time)
+
+class stocktbl85(G_Base):
+    __tablename__= 'stocktbl85'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl85_index',stocktbl85.stock_id,stocktbl85.bigvolumn_status,stocktbl85.trade_date,stocktbl85.trade_time)
+
+class stocktbl86(G_Base):
+    __tablename__= 'stocktbl86'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl86_index',stocktbl86.stock_id,stocktbl86.bigvolumn_status,stocktbl86.trade_date,stocktbl86.trade_time)
+
+class stocktbl87(G_Base):
+    __tablename__= 'stocktbl87'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl87_index',stocktbl87.stock_id,stocktbl87.bigvolumn_status,stocktbl87.trade_date,stocktbl87.trade_time)
+
+class stocktbl88(G_Base):
+    __tablename__= 'stocktbl88'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl88_index',stocktbl88.stock_id,stocktbl88.bigvolumn_status,stocktbl88.trade_date,stocktbl88.trade_time)
+
+class stocktbl89(G_Base):
+    __tablename__= 'stocktbl89'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl89_index',stocktbl89.stock_id,stocktbl89.bigvolumn_status,stocktbl89.trade_date,stocktbl89.trade_time)
+
+class stocktbl90(G_Base):
+    __tablename__= 'stocktbl90'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl90_index',stocktbl90.stock_id,stocktbl90.bigvolumn_status,stocktbl90.trade_date,stocktbl90.trade_time)
+
+class stocktbl91(G_Base):
+    __tablename__= 'stocktbl91'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl91_index',stocktbl91.stock_id,stocktbl91.bigvolumn_status,stocktbl91.trade_date,stocktbl91.trade_time)
+
+class stocktbl92(G_Base):
+    __tablename__= 'stocktbl92'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl92_index',stocktbl92.stock_id,stocktbl92.bigvolumn_status,stocktbl92.trade_date,stocktbl92.trade_time)
+
+class stocktbl93(G_Base):
+    __tablename__= 'stocktbl93'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl93_index',stocktbl93.stock_id,stocktbl93.bigvolumn_status,stocktbl93.trade_date,stocktbl93.trade_time)
+
+class stocktbl94(G_Base):
+    __tablename__= 'stocktbl94'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl94_index',stocktbl94.stock_id,stocktbl94.bigvolumn_status,stocktbl94.trade_date,stocktbl94.trade_time)
+
+class stocktbl95(G_Base):
+    __tablename__= 'stocktbl95'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl95_index',stocktbl95.stock_id,stocktbl95.bigvolumn_status,stocktbl95.trade_date,stocktbl95.trade_time)
+
+class stocktbl96(G_Base):
+    __tablename__= 'stocktbl96'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl96_index',stocktbl96.stock_id,stocktbl96.bigvolumn_status,stocktbl96.trade_date,stocktbl96.trade_time)
+
+class stocktbl97(G_Base):
+    __tablename__= 'stocktbl97'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl97_index',stocktbl97.stock_id,stocktbl97.bigvolumn_status,stocktbl97.trade_date,stocktbl97.trade_time)
+
+class stocktbl98(G_Base):
+    __tablename__= 'stocktbl98'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl98_index',stocktbl98.stock_id,stocktbl98.bigvolumn_status,stocktbl98.trade_date,stocktbl98.trade_time)
+
+class stocktbl99(G_Base):
+    __tablename__= 'stocktbl99'
+    id = Column(Integer,Sequence('user_id_seq'),primary_key=True, unique=True)
+    stock_id = Column(String(8))
+    bigvolumn_status = Column(Integer)
+    trade_time = Column(Time)
+    trade_date = Column(Date)
+    price = Column(Numeric(10,2))
+    variation = Column(Numeric(10,2), default = 0)
+    trade_volumn = Column(Integer)
+    trade_value = Column(Numeric(10,2))
+    trade_status = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+    
+Index('stocktbl99_index',stocktbl99.stock_id,stocktbl99.bigvolumn_status,stocktbl99.trade_date,stocktbl99.trade_time)
+

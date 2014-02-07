@@ -1,0 +1,3000 @@
+class BigDailyPriceTable0(G_Base):
+    __tablename__= 'big_daily_price_table0'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable0(G_Base):
+    __tablename__= 'buy_big_daily_price_table0'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable0(G_Base):
+    __tablename__= 'sell_big_daily_price_table0'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable1(G_Base):
+    __tablename__= 'big_daily_price_table1'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable1(G_Base):
+    __tablename__= 'buy_big_daily_price_table1'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable1(G_Base):
+    __tablename__= 'sell_big_daily_price_table1'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable2(G_Base):
+    __tablename__= 'big_daily_price_table2'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable2(G_Base):
+    __tablename__= 'buy_big_daily_price_table2'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable2(G_Base):
+    __tablename__= 'sell_big_daily_price_table2'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable3(G_Base):
+    __tablename__= 'big_daily_price_table3'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable3(G_Base):
+    __tablename__= 'buy_big_daily_price_table3'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable3(G_Base):
+    __tablename__= 'sell_big_daily_price_table3'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable4(G_Base):
+    __tablename__= 'big_daily_price_table4'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable4(G_Base):
+    __tablename__= 'buy_big_daily_price_table4'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable4(G_Base):
+    __tablename__= 'sell_big_daily_price_table4'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable5(G_Base):
+    __tablename__= 'big_daily_price_table5'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable5(G_Base):
+    __tablename__= 'buy_big_daily_price_table5'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable5(G_Base):
+    __tablename__= 'sell_big_daily_price_table5'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable6(G_Base):
+    __tablename__= 'big_daily_price_table6'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable6(G_Base):
+    __tablename__= 'buy_big_daily_price_table6'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable6(G_Base):
+    __tablename__= 'sell_big_daily_price_table6'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable7(G_Base):
+    __tablename__= 'big_daily_price_table7'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable7(G_Base):
+    __tablename__= 'buy_big_daily_price_table7'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable7(G_Base):
+    __tablename__= 'sell_big_daily_price_table7'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable8(G_Base):
+    __tablename__= 'big_daily_price_table8'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable8(G_Base):
+    __tablename__= 'buy_big_daily_price_table8'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable8(G_Base):
+    __tablename__= 'sell_big_daily_price_table8'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable9(G_Base):
+    __tablename__= 'big_daily_price_table9'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable9(G_Base):
+    __tablename__= 'buy_big_daily_price_table9'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable9(G_Base):
+    __tablename__= 'sell_big_daily_price_table9'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable10(G_Base):
+    __tablename__= 'big_daily_price_table10'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable10(G_Base):
+    __tablename__= 'buy_big_daily_price_table10'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable10(G_Base):
+    __tablename__= 'sell_big_daily_price_table10'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable11(G_Base):
+    __tablename__= 'big_daily_price_table11'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable11(G_Base):
+    __tablename__= 'buy_big_daily_price_table11'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable11(G_Base):
+    __tablename__= 'sell_big_daily_price_table11'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable12(G_Base):
+    __tablename__= 'big_daily_price_table12'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable12(G_Base):
+    __tablename__= 'buy_big_daily_price_table12'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable12(G_Base):
+    __tablename__= 'sell_big_daily_price_table12'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable13(G_Base):
+    __tablename__= 'big_daily_price_table13'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable13(G_Base):
+    __tablename__= 'buy_big_daily_price_table13'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable13(G_Base):
+    __tablename__= 'sell_big_daily_price_table13'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable14(G_Base):
+    __tablename__= 'big_daily_price_table14'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable14(G_Base):
+    __tablename__= 'buy_big_daily_price_table14'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable14(G_Base):
+    __tablename__= 'sell_big_daily_price_table14'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable15(G_Base):
+    __tablename__= 'big_daily_price_table15'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable15(G_Base):
+    __tablename__= 'buy_big_daily_price_table15'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable15(G_Base):
+    __tablename__= 'sell_big_daily_price_table15'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable16(G_Base):
+    __tablename__= 'big_daily_price_table16'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable16(G_Base):
+    __tablename__= 'buy_big_daily_price_table16'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable16(G_Base):
+    __tablename__= 'sell_big_daily_price_table16'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable17(G_Base):
+    __tablename__= 'big_daily_price_table17'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable17(G_Base):
+    __tablename__= 'buy_big_daily_price_table17'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable17(G_Base):
+    __tablename__= 'sell_big_daily_price_table17'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable18(G_Base):
+    __tablename__= 'big_daily_price_table18'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable18(G_Base):
+    __tablename__= 'buy_big_daily_price_table18'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable18(G_Base):
+    __tablename__= 'sell_big_daily_price_table18'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable19(G_Base):
+    __tablename__= 'big_daily_price_table19'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable19(G_Base):
+    __tablename__= 'buy_big_daily_price_table19'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable19(G_Base):
+    __tablename__= 'sell_big_daily_price_table19'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable20(G_Base):
+    __tablename__= 'big_daily_price_table20'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable20(G_Base):
+    __tablename__= 'buy_big_daily_price_table20'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable20(G_Base):
+    __tablename__= 'sell_big_daily_price_table20'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable21(G_Base):
+    __tablename__= 'big_daily_price_table21'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable21(G_Base):
+    __tablename__= 'buy_big_daily_price_table21'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable21(G_Base):
+    __tablename__= 'sell_big_daily_price_table21'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable22(G_Base):
+    __tablename__= 'big_daily_price_table22'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable22(G_Base):
+    __tablename__= 'buy_big_daily_price_table22'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable22(G_Base):
+    __tablename__= 'sell_big_daily_price_table22'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable23(G_Base):
+    __tablename__= 'big_daily_price_table23'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable23(G_Base):
+    __tablename__= 'buy_big_daily_price_table23'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable23(G_Base):
+    __tablename__= 'sell_big_daily_price_table23'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable24(G_Base):
+    __tablename__= 'big_daily_price_table24'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable24(G_Base):
+    __tablename__= 'buy_big_daily_price_table24'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable24(G_Base):
+    __tablename__= 'sell_big_daily_price_table24'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable25(G_Base):
+    __tablename__= 'big_daily_price_table25'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable25(G_Base):
+    __tablename__= 'buy_big_daily_price_table25'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable25(G_Base):
+    __tablename__= 'sell_big_daily_price_table25'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable26(G_Base):
+    __tablename__= 'big_daily_price_table26'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable26(G_Base):
+    __tablename__= 'buy_big_daily_price_table26'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable26(G_Base):
+    __tablename__= 'sell_big_daily_price_table26'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable27(G_Base):
+    __tablename__= 'big_daily_price_table27'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable27(G_Base):
+    __tablename__= 'buy_big_daily_price_table27'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable27(G_Base):
+    __tablename__= 'sell_big_daily_price_table27'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable28(G_Base):
+    __tablename__= 'big_daily_price_table28'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable28(G_Base):
+    __tablename__= 'buy_big_daily_price_table28'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable28(G_Base):
+    __tablename__= 'sell_big_daily_price_table28'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable29(G_Base):
+    __tablename__= 'big_daily_price_table29'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable29(G_Base):
+    __tablename__= 'buy_big_daily_price_table29'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable29(G_Base):
+    __tablename__= 'sell_big_daily_price_table29'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable30(G_Base):
+    __tablename__= 'big_daily_price_table30'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable30(G_Base):
+    __tablename__= 'buy_big_daily_price_table30'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable30(G_Base):
+    __tablename__= 'sell_big_daily_price_table30'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable31(G_Base):
+    __tablename__= 'big_daily_price_table31'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable31(G_Base):
+    __tablename__= 'buy_big_daily_price_table31'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable31(G_Base):
+    __tablename__= 'sell_big_daily_price_table31'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable32(G_Base):
+    __tablename__= 'big_daily_price_table32'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable32(G_Base):
+    __tablename__= 'buy_big_daily_price_table32'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable32(G_Base):
+    __tablename__= 'sell_big_daily_price_table32'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable33(G_Base):
+    __tablename__= 'big_daily_price_table33'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable33(G_Base):
+    __tablename__= 'buy_big_daily_price_table33'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable33(G_Base):
+    __tablename__= 'sell_big_daily_price_table33'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable34(G_Base):
+    __tablename__= 'big_daily_price_table34'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable34(G_Base):
+    __tablename__= 'buy_big_daily_price_table34'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable34(G_Base):
+    __tablename__= 'sell_big_daily_price_table34'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable35(G_Base):
+    __tablename__= 'big_daily_price_table35'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable35(G_Base):
+    __tablename__= 'buy_big_daily_price_table35'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable35(G_Base):
+    __tablename__= 'sell_big_daily_price_table35'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable36(G_Base):
+    __tablename__= 'big_daily_price_table36'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable36(G_Base):
+    __tablename__= 'buy_big_daily_price_table36'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable36(G_Base):
+    __tablename__= 'sell_big_daily_price_table36'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable37(G_Base):
+    __tablename__= 'big_daily_price_table37'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable37(G_Base):
+    __tablename__= 'buy_big_daily_price_table37'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable37(G_Base):
+    __tablename__= 'sell_big_daily_price_table37'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable38(G_Base):
+    __tablename__= 'big_daily_price_table38'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable38(G_Base):
+    __tablename__= 'buy_big_daily_price_table38'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable38(G_Base):
+    __tablename__= 'sell_big_daily_price_table38'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable39(G_Base):
+    __tablename__= 'big_daily_price_table39'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable39(G_Base):
+    __tablename__= 'buy_big_daily_price_table39'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable39(G_Base):
+    __tablename__= 'sell_big_daily_price_table39'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable40(G_Base):
+    __tablename__= 'big_daily_price_table40'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable40(G_Base):
+    __tablename__= 'buy_big_daily_price_table40'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable40(G_Base):
+    __tablename__= 'sell_big_daily_price_table40'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable41(G_Base):
+    __tablename__= 'big_daily_price_table41'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable41(G_Base):
+    __tablename__= 'buy_big_daily_price_table41'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable41(G_Base):
+    __tablename__= 'sell_big_daily_price_table41'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable42(G_Base):
+    __tablename__= 'big_daily_price_table42'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable42(G_Base):
+    __tablename__= 'buy_big_daily_price_table42'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable42(G_Base):
+    __tablename__= 'sell_big_daily_price_table42'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable43(G_Base):
+    __tablename__= 'big_daily_price_table43'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable43(G_Base):
+    __tablename__= 'buy_big_daily_price_table43'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable43(G_Base):
+    __tablename__= 'sell_big_daily_price_table43'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable44(G_Base):
+    __tablename__= 'big_daily_price_table44'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable44(G_Base):
+    __tablename__= 'buy_big_daily_price_table44'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable44(G_Base):
+    __tablename__= 'sell_big_daily_price_table44'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable45(G_Base):
+    __tablename__= 'big_daily_price_table45'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable45(G_Base):
+    __tablename__= 'buy_big_daily_price_table45'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable45(G_Base):
+    __tablename__= 'sell_big_daily_price_table45'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable46(G_Base):
+    __tablename__= 'big_daily_price_table46'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable46(G_Base):
+    __tablename__= 'buy_big_daily_price_table46'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable46(G_Base):
+    __tablename__= 'sell_big_daily_price_table46'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable47(G_Base):
+    __tablename__= 'big_daily_price_table47'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable47(G_Base):
+    __tablename__= 'buy_big_daily_price_table47'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable47(G_Base):
+    __tablename__= 'sell_big_daily_price_table47'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable48(G_Base):
+    __tablename__= 'big_daily_price_table48'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable48(G_Base):
+    __tablename__= 'buy_big_daily_price_table48'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable48(G_Base):
+    __tablename__= 'sell_big_daily_price_table48'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable49(G_Base):
+    __tablename__= 'big_daily_price_table49'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable49(G_Base):
+    __tablename__= 'buy_big_daily_price_table49'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable49(G_Base):
+    __tablename__= 'sell_big_daily_price_table49'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable50(G_Base):
+    __tablename__= 'big_daily_price_table50'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable50(G_Base):
+    __tablename__= 'buy_big_daily_price_table50'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable50(G_Base):
+    __tablename__= 'sell_big_daily_price_table50'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable51(G_Base):
+    __tablename__= 'big_daily_price_table51'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable51(G_Base):
+    __tablename__= 'buy_big_daily_price_table51'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable51(G_Base):
+    __tablename__= 'sell_big_daily_price_table51'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable52(G_Base):
+    __tablename__= 'big_daily_price_table52'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable52(G_Base):
+    __tablename__= 'buy_big_daily_price_table52'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable52(G_Base):
+    __tablename__= 'sell_big_daily_price_table52'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable53(G_Base):
+    __tablename__= 'big_daily_price_table53'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable53(G_Base):
+    __tablename__= 'buy_big_daily_price_table53'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable53(G_Base):
+    __tablename__= 'sell_big_daily_price_table53'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable54(G_Base):
+    __tablename__= 'big_daily_price_table54'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable54(G_Base):
+    __tablename__= 'buy_big_daily_price_table54'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable54(G_Base):
+    __tablename__= 'sell_big_daily_price_table54'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable55(G_Base):
+    __tablename__= 'big_daily_price_table55'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable55(G_Base):
+    __tablename__= 'buy_big_daily_price_table55'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable55(G_Base):
+    __tablename__= 'sell_big_daily_price_table55'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable56(G_Base):
+    __tablename__= 'big_daily_price_table56'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable56(G_Base):
+    __tablename__= 'buy_big_daily_price_table56'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable56(G_Base):
+    __tablename__= 'sell_big_daily_price_table56'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable57(G_Base):
+    __tablename__= 'big_daily_price_table57'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable57(G_Base):
+    __tablename__= 'buy_big_daily_price_table57'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable57(G_Base):
+    __tablename__= 'sell_big_daily_price_table57'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable58(G_Base):
+    __tablename__= 'big_daily_price_table58'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable58(G_Base):
+    __tablename__= 'buy_big_daily_price_table58'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable58(G_Base):
+    __tablename__= 'sell_big_daily_price_table58'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable59(G_Base):
+    __tablename__= 'big_daily_price_table59'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable59(G_Base):
+    __tablename__= 'buy_big_daily_price_table59'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable59(G_Base):
+    __tablename__= 'sell_big_daily_price_table59'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable60(G_Base):
+    __tablename__= 'big_daily_price_table60'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable60(G_Base):
+    __tablename__= 'buy_big_daily_price_table60'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable60(G_Base):
+    __tablename__= 'sell_big_daily_price_table60'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable61(G_Base):
+    __tablename__= 'big_daily_price_table61'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable61(G_Base):
+    __tablename__= 'buy_big_daily_price_table61'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable61(G_Base):
+    __tablename__= 'sell_big_daily_price_table61'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable62(G_Base):
+    __tablename__= 'big_daily_price_table62'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable62(G_Base):
+    __tablename__= 'buy_big_daily_price_table62'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable62(G_Base):
+    __tablename__= 'sell_big_daily_price_table62'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable63(G_Base):
+    __tablename__= 'big_daily_price_table63'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable63(G_Base):
+    __tablename__= 'buy_big_daily_price_table63'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable63(G_Base):
+    __tablename__= 'sell_big_daily_price_table63'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable64(G_Base):
+    __tablename__= 'big_daily_price_table64'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable64(G_Base):
+    __tablename__= 'buy_big_daily_price_table64'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable64(G_Base):
+    __tablename__= 'sell_big_daily_price_table64'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable65(G_Base):
+    __tablename__= 'big_daily_price_table65'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable65(G_Base):
+    __tablename__= 'buy_big_daily_price_table65'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable65(G_Base):
+    __tablename__= 'sell_big_daily_price_table65'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable66(G_Base):
+    __tablename__= 'big_daily_price_table66'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable66(G_Base):
+    __tablename__= 'buy_big_daily_price_table66'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable66(G_Base):
+    __tablename__= 'sell_big_daily_price_table66'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable67(G_Base):
+    __tablename__= 'big_daily_price_table67'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable67(G_Base):
+    __tablename__= 'buy_big_daily_price_table67'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable67(G_Base):
+    __tablename__= 'sell_big_daily_price_table67'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable68(G_Base):
+    __tablename__= 'big_daily_price_table68'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable68(G_Base):
+    __tablename__= 'buy_big_daily_price_table68'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable68(G_Base):
+    __tablename__= 'sell_big_daily_price_table68'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable69(G_Base):
+    __tablename__= 'big_daily_price_table69'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable69(G_Base):
+    __tablename__= 'buy_big_daily_price_table69'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable69(G_Base):
+    __tablename__= 'sell_big_daily_price_table69'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable70(G_Base):
+    __tablename__= 'big_daily_price_table70'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable70(G_Base):
+    __tablename__= 'buy_big_daily_price_table70'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable70(G_Base):
+    __tablename__= 'sell_big_daily_price_table70'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable71(G_Base):
+    __tablename__= 'big_daily_price_table71'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable71(G_Base):
+    __tablename__= 'buy_big_daily_price_table71'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable71(G_Base):
+    __tablename__= 'sell_big_daily_price_table71'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable72(G_Base):
+    __tablename__= 'big_daily_price_table72'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable72(G_Base):
+    __tablename__= 'buy_big_daily_price_table72'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable72(G_Base):
+    __tablename__= 'sell_big_daily_price_table72'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable73(G_Base):
+    __tablename__= 'big_daily_price_table73'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable73(G_Base):
+    __tablename__= 'buy_big_daily_price_table73'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable73(G_Base):
+    __tablename__= 'sell_big_daily_price_table73'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable74(G_Base):
+    __tablename__= 'big_daily_price_table74'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable74(G_Base):
+    __tablename__= 'buy_big_daily_price_table74'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable74(G_Base):
+    __tablename__= 'sell_big_daily_price_table74'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable75(G_Base):
+    __tablename__= 'big_daily_price_table75'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable75(G_Base):
+    __tablename__= 'buy_big_daily_price_table75'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable75(G_Base):
+    __tablename__= 'sell_big_daily_price_table75'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable76(G_Base):
+    __tablename__= 'big_daily_price_table76'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable76(G_Base):
+    __tablename__= 'buy_big_daily_price_table76'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable76(G_Base):
+    __tablename__= 'sell_big_daily_price_table76'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable77(G_Base):
+    __tablename__= 'big_daily_price_table77'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable77(G_Base):
+    __tablename__= 'buy_big_daily_price_table77'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable77(G_Base):
+    __tablename__= 'sell_big_daily_price_table77'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable78(G_Base):
+    __tablename__= 'big_daily_price_table78'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable78(G_Base):
+    __tablename__= 'buy_big_daily_price_table78'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable78(G_Base):
+    __tablename__= 'sell_big_daily_price_table78'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable79(G_Base):
+    __tablename__= 'big_daily_price_table79'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable79(G_Base):
+    __tablename__= 'buy_big_daily_price_table79'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable79(G_Base):
+    __tablename__= 'sell_big_daily_price_table79'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable80(G_Base):
+    __tablename__= 'big_daily_price_table80'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable80(G_Base):
+    __tablename__= 'buy_big_daily_price_table80'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable80(G_Base):
+    __tablename__= 'sell_big_daily_price_table80'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable81(G_Base):
+    __tablename__= 'big_daily_price_table81'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable81(G_Base):
+    __tablename__= 'buy_big_daily_price_table81'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable81(G_Base):
+    __tablename__= 'sell_big_daily_price_table81'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable82(G_Base):
+    __tablename__= 'big_daily_price_table82'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable82(G_Base):
+    __tablename__= 'buy_big_daily_price_table82'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable82(G_Base):
+    __tablename__= 'sell_big_daily_price_table82'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable83(G_Base):
+    __tablename__= 'big_daily_price_table83'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable83(G_Base):
+    __tablename__= 'buy_big_daily_price_table83'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable83(G_Base):
+    __tablename__= 'sell_big_daily_price_table83'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable84(G_Base):
+    __tablename__= 'big_daily_price_table84'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable84(G_Base):
+    __tablename__= 'buy_big_daily_price_table84'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable84(G_Base):
+    __tablename__= 'sell_big_daily_price_table84'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable85(G_Base):
+    __tablename__= 'big_daily_price_table85'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable85(G_Base):
+    __tablename__= 'buy_big_daily_price_table85'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable85(G_Base):
+    __tablename__= 'sell_big_daily_price_table85'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable86(G_Base):
+    __tablename__= 'big_daily_price_table86'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable86(G_Base):
+    __tablename__= 'buy_big_daily_price_table86'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable86(G_Base):
+    __tablename__= 'sell_big_daily_price_table86'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable87(G_Base):
+    __tablename__= 'big_daily_price_table87'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable87(G_Base):
+    __tablename__= 'buy_big_daily_price_table87'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable87(G_Base):
+    __tablename__= 'sell_big_daily_price_table87'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable88(G_Base):
+    __tablename__= 'big_daily_price_table88'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable88(G_Base):
+    __tablename__= 'buy_big_daily_price_table88'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable88(G_Base):
+    __tablename__= 'sell_big_daily_price_table88'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable89(G_Base):
+    __tablename__= 'big_daily_price_table89'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable89(G_Base):
+    __tablename__= 'buy_big_daily_price_table89'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable89(G_Base):
+    __tablename__= 'sell_big_daily_price_table89'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable90(G_Base):
+    __tablename__= 'big_daily_price_table90'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable90(G_Base):
+    __tablename__= 'buy_big_daily_price_table90'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable90(G_Base):
+    __tablename__= 'sell_big_daily_price_table90'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable91(G_Base):
+    __tablename__= 'big_daily_price_table91'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable91(G_Base):
+    __tablename__= 'buy_big_daily_price_table91'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable91(G_Base):
+    __tablename__= 'sell_big_daily_price_table91'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable92(G_Base):
+    __tablename__= 'big_daily_price_table92'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable92(G_Base):
+    __tablename__= 'buy_big_daily_price_table92'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable92(G_Base):
+    __tablename__= 'sell_big_daily_price_table92'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable93(G_Base):
+    __tablename__= 'big_daily_price_table93'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable93(G_Base):
+    __tablename__= 'buy_big_daily_price_table93'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable93(G_Base):
+    __tablename__= 'sell_big_daily_price_table93'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable94(G_Base):
+    __tablename__= 'big_daily_price_table94'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable94(G_Base):
+    __tablename__= 'buy_big_daily_price_table94'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable94(G_Base):
+    __tablename__= 'sell_big_daily_price_table94'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable95(G_Base):
+    __tablename__= 'big_daily_price_table95'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable95(G_Base):
+    __tablename__= 'buy_big_daily_price_table95'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable95(G_Base):
+    __tablename__= 'sell_big_daily_price_table95'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable96(G_Base):
+    __tablename__= 'big_daily_price_table96'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable96(G_Base):
+    __tablename__= 'buy_big_daily_price_table96'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable96(G_Base):
+    __tablename__= 'sell_big_daily_price_table96'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable97(G_Base):
+    __tablename__= 'big_daily_price_table97'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable97(G_Base):
+    __tablename__= 'buy_big_daily_price_table97'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable97(G_Base):
+    __tablename__= 'sell_big_daily_price_table97'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable98(G_Base):
+    __tablename__= 'big_daily_price_table98'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable98(G_Base):
+    __tablename__= 'buy_big_daily_price_table98'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable98(G_Base):
+    __tablename__= 'sell_big_daily_price_table98'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BigDailyPriceTable99(G_Base):
+    __tablename__= 'big_daily_price_table99'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class BuyBigDailyPriceTable99(G_Base):
+    __tablename__= 'buy_big_daily_price_table99'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
+class SellBigDailyPriceTable99(G_Base):
+    __tablename__= 'sell_big_daily_price_table99'
+    stock_id = Column(String(8),primary_key=True)
+    trade_date = Column(Date,primary_key=True)
+    price = Column(Numeric(10,2),primary_key=True)
+    big_type = Column(Integer, primary_key=True, autoincrement=False)
+    count = Column(Integer)
+    amount = Column(Integer)
+    insert_timestamp = Column(DateTime, default = func.current_timestamp())
+
