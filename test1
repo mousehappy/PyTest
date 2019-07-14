@@ -1,0 +1,21 @@
+{
+  "name": "AONE",
+  "children": [
+    {
+      "name": "VPC瑶池",
+      "value": 3938
+    },
+    {
+      "name": "SLB瑶池",
+      "value": 3812
+    },
+    {
+      "name": "CEN瑶池",
+      "value": 6714
+    },
+    {
+      "name": "CCN瑶池",
+      "value": 743
+    }
+  ]
+}
