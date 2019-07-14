@@ -1,20 +1,20 @@
 {
-  "name": "cluster",
+  "name": "AONE",
   "children": [
     {
-      "name": "AgglomerativeCluster",
+      "name": "VPC瑶池",
       "value": 3938
     },
     {
-      "name": "CommunityStructure",
+      "name": "SLB瑶池",
       "value": 3812
     },
     {
-      "name": "HierarchicalCluster",
+      "name": "CEN瑶池",
       "value": 6714
     },
     {
-      "name": "MergeEdge",
+      "name": "CCN瑶池",
       "value": 743
     }
   ]
