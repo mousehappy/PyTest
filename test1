@@ -1,93 +1,94 @@
-{
-  "name": "Change",
-  "children": [
-    {
-      "name": "idb",
-      "children": [
-        {
-          "name": "数据订正 ",
-          "value": 1
-        }
-      ]
-    },
-    {
-      "name": "AONE",
-      "children": [
-        {
-          "name": "VPC瑶池",
-          "value": 1
-        },
-        {
-          "name": "SLB瑶池",
-          "value": 1
-        },
-        {
-          "name": "CEN瑶池/控制器",
-          "value": 1
-        },
-        {
-          "name": "CCN瑶池/控制器",
-          "value": 1
-        }
-      ]
-    },
-    {
-      "name": "落日弓",
-      "children": [
-        {
-          "name": "XGW",
-          "value": 1
-        },
-        {
-          "name": "AVS",
-          "value": 1
-        },
-        {
-          "name": "VPC控制器",
-          "value": 1
-        }
-      ]
-    },
-    {
-      "name": "齐天",
-      "children": [
-        {
-          "name": "LVS",
-          "value": 1
-        },
-        {
-          "name": "PROXY",
-          "value": 1
-        },
-        {
-          "name": "SLB-master",
-          "value": 1
-        },
-        {
-          "name": "AONP",
-          "value": 1
-        },
-        {
-          "name": "UIS",
-          "value": 1
-        },
-        {
-          "name": "VPN",
-          "value": 1
-        },
-        {
-          "name": "CCN",
-          "value": 1
-        },
-        {
-          "name": "CEN",
-          "value": 1
-        },
-        {
-          "name": "非日常变更",
-          "value": 3
-        }
-      ]
-    }
-  ]
-}
+    def write_db(self, db, table, result, insert_ignore=False):
+        """Write data to db.
+        """
+        # build data.
+        data = []
+        sql = ""
+        if isinstance(result, list):
+            for item in result:
+                keys = item.keys()
+                keys.sort()
+                values = [item[i] for i in keys]
+                data.append(tuple(values))
+                if not sql:
+                    sql_keys = map(lambda x: '`%s`' % x, keys)
+                    sql = "%s INTO %s (%s) VALUES (%s)" % ("INSERT IGNORE" if insert_ignore else "REPLACE",
+                                                           table, ", ".join(sql_keys),
+                                                           ", ".join(["%s" for i in xrange(len(keys))]))
+        elif isinstance(result, dict):
+            keys = result.keys()
+            keys.sort()
+            values = [result[i] for i in keys]
+            data.append(tuple(values))
+            if not sql:
+                sql_keys = map(lambda x: '`%s`' % x, keys)
+                sql = "%s INTO %s (%s) VALUES (%s)" % ("INSERT IGNORE" if insert_ignore else "REPLACE",
+                                                       table, ", ".join(sql_keys),
+                                                       ", ".join(["%s" for i in xrange(len(keys))]))
+        # exec sql.
+        return self.db_client[db].executemany_rowcount(sql, data)
+
+    def write_db_with_update(self, db, table, result, get_rowcount=True):
+        return self.write_db_wang(db, table, result, get_rowcount)
+
+    # def delete_outdated_rows(self, db, table):
+
+    def write_db_wang(self, db, table, result, get_rowcount=True):
+        """Write data to db.
+        """
+        # build data.
+        data = []
+        sql = ""
+        select_sql = ""
+        select_keys = []
+        select_data = []
+        is_many = True
+        if isinstance(result, list):
+            for item in result:
+                keys = item.keys()
+                keys.sort()
+                values = [item[i] for i in keys]
+                data.append(tuple(values))
+                if not sql:
+                    sql_keys = map(lambda x: '`%s`' % x, keys)
+                    sql = "INSERT INTO %s(%s) VALUES (%s) ON DUPLICATE KEY UPDATE %s" % (table,
+                                                                                         ", ".join(sql_keys),
+                                                                                         ", ".join(["%s" for i in xrange(len(keys))]),
+                                                                                         ", ".join(i+" = VALUES(%s)" % (i) for i in sql_keys if i != "`ip`"))
+        elif isinstance(result, dict):
+            is_many = False
+            keys = result.keys()
+            keys.sort()
+            # values =
+            data = [result[i] for i in keys]
+            select_keys = [i for i in keys if result[i]]
+            select_data = [result[i] for i in keys if result[i]]
+            if not sql:
+                sql_keys = map(lambda x: '`%s`' % x, keys)
+                sql = "INSERT INTO %s(%s) VALUES (%s) ON DUPLICATE KEY UPDATE %s" % (table,
+                                                                                        ", ".join(sql_keys),
+                                                                                        ", ".join(["%s" for i in xrange(len(keys))]),
+                                                                                        ", ".join(i+" = VALUES(%s)" % (i) for i in sql_keys if i != "`ip`"))
+            if not select_sql:
+                select_sql = "select * from `%s` where " % table
+                select_sql += " and ".join(["`%s` = %%s" % k for k in select_keys])
+                # print select_sql
+        # exec sql.
+        db_client = None
+        if isinstance(db, str):
+            db_client = self.db_client[db]
+        elif isinstance(db, Connection):
+            db_client = db
+        else:
+            raise RuntimeError("Unsupported db argument type: %s" % db)
+        if is_many:
+            if get_rowcount:
+                return db_client.executemany_rowcount(sql, data)
+            else:
+                return db_client.executemany_lastrowid(sql, data)
+        else:
+            if get_rowcount:
+                return db_client.execute_rowcount(sql, *data)
+            else:
+                db_client.execute_lastrowid(sql, *data)
+                return db_client.get(select_sql, *select_data)
